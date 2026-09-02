@@ -1,0 +1,69 @@
+Tue Aug 11 21:04:11 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.105.08             Driver Version: 580.105.08     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4090 D      On  |   00000000:27:00.0 Off |                  Off |
+| 30%   32C    P0             47W /  425W |       0MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 4090 D      On  |   00000000:98:00.0 Off |                  Off |
+|  0%   28C    P8             18W /  425W |       0MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+🚀🚀 Script starts...
+output_model_dir='ckpt/conversion/qwen3_vl_4b_i_sft_lora_conversion/20260811_210433/'
+config={'parent_model_name': 'qwen3_vl_4b_i', 'parent_training_method': 'base', 'training_method': 'sft_lora', 'dataset_configs': {'conversion': {'dataset_id': 'kdeng03/mol-rep-conversion-v0', 'dataset_split': 'train'}}, 'model_init_kwargs': {'model_name_or_path': 'Qwen/Qwen3-VL-4B-Instruct'}, 'sft_configs': {'max_length': None, 'per_device_train_batch_size': 1, 'gradient_accumulation_steps': 8, 'gradient_checkpointing': True, 'learning_rate': '1e-4', 'num_train_epochs': 2, 'assistant_only_loss': True, 'logging_steps': 16, 'save_strategy': 'steps', 'save_steps': 100, 'warmup_ratio': 0.03}, 'lora_configs': {'r': 16, 'lora_alpha': 32, 'lora_dropout': 0.05, 'target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'up_proj', 'down_proj', 'gate_proj']}}
+🚀🚀 Script starts...
+output_model_dir='ckpt/conversion/qwen3_vl_4b_i_sft_lora_conversion/20260811_210433/'
+config={'parent_model_name': 'qwen3_vl_4b_i', 'parent_training_method': 'base', 'training_method': 'sft_lora', 'dataset_configs': {'conversion': {'dataset_id': 'kdeng03/mol-rep-conversion-v0', 'dataset_split': 'train'}}, 'model_init_kwargs': {'model_name_or_path': 'Qwen/Qwen3-VL-4B-Instruct'}, 'sft_configs': {'max_length': None, 'per_device_train_batch_size': 1, 'gradient_accumulation_steps': 8, 'gradient_checkpointing': True, 'learning_rate': '1e-4', 'num_train_epochs': 2, 'assistant_only_loss': True, 'logging_steps': 16, 'save_strategy': 'steps', 'save_steps': 100, 'warmup_ratio': 0.03}, 'lora_configs': {'r': 16, 'lora_alpha': 32, 'lora_dropout': 0.05, 'target_modules': ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'up_proj', 'down_proj', 'gate_proj']}}
+Using LoRA with config: peft_config=LoraConfig(task_type=None, peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, peft_version='0.20.0', base_model_name_or_path=None, revision=None, inference_mode=False, r=16, target_modules={'up_proj', 'q_proj', 'v_proj', 'down_proj', 'o_proj', 'gate_proj', 'k_proj'}, exclude_modules=None, lora_alpha=32, lora_dropout=0.05, fan_in_fan_out=False, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', trainable_token_indices=None, loftq_config={}, eva_config=None, corda_config=None, lora_ga_config=None, use_dora=False, velora_config=None, alora_invocation_tokens=None, use_qalora=False, qalora_group_size=16, monteclora_config=None, layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False), lora_bias=False, target_parameters=None, use_bdlora=None, arrow_config=None, ensure_weight_tying=False)
+Using LoRA with config: peft_config=LoraConfig(task_type=None, peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, peft_version='0.20.0', base_model_name_or_path=None, revision=None, inference_mode=False, r=16, target_modules={'gate_proj', 'v_proj', 'up_proj', 'q_proj', 'o_proj', 'k_proj', 'down_proj'}, exclude_modules=None, lora_alpha=32, lora_dropout=0.05, fan_in_fan_out=False, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', trainable_token_indices=None, loftq_config={}, eva_config=None, corda_config=None, lora_ga_config=None, use_dora=False, velora_config=None, alora_invocation_tokens=None, use_qalora=False, qalora_group_size=16, monteclora_config=None, layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False), lora_bias=False, target_parameters=None, use_bdlora=None, arrow_config=None, ensure_weight_tying=False)
+🕙🕙 Start training...
+🕙🕙 Start training...
+{'loss': '1.851', 'grad_norm': '1.084', 'learning_rate': '9.976e-05', 'entropy': '0.8186', 'num_tokens': '9.054e+04', 'mean_token_accuracy': '0.6342', 'epoch': '0.07306'}
+{'loss': '1.162', 'grad_norm': '0.8924', 'learning_rate': '9.599e-05', 'entropy': '1.17', 'num_tokens': '1.855e+05', 'mean_token_accuracy': '0.6739', 'epoch': '0.1461'}
+{'loss': '0.9133', 'grad_norm': '0.7328', 'learning_rate': '9.222e-05', 'entropy': '0.8626', 'num_tokens': '2.79e+05', 'mean_token_accuracy': '0.7032', 'epoch': '0.2192'}
+{'loss': '0.7756', 'grad_norm': '1.093', 'learning_rate': '8.844e-05', 'entropy': '0.7326', 'num_tokens': '3.802e+05', 'mean_token_accuracy': '0.751', 'epoch': '0.2922'}
+{'loss': '0.7216', 'grad_norm': '1.346', 'learning_rate': '8.467e-05', 'entropy': '0.6943', 'num_tokens': '4.914e+05', 'mean_token_accuracy': '0.7719', 'epoch': '0.3653'}
+{'loss': '0.616', 'grad_norm': '1.656', 'learning_rate': '8.09e-05', 'entropy': '0.6217', 'num_tokens': '6.053e+05', 'mean_token_accuracy': '0.7833', 'epoch': '0.4384'}
+{'loss': '0.6028', 'grad_norm': '1.657', 'learning_rate': '7.712e-05', 'entropy': '0.5792', 'num_tokens': '7.084e+05', 'mean_token_accuracy': '0.7954', 'epoch': '0.5114'}
+{'loss': '0.5444', 'grad_norm': '1.173', 'learning_rate': '7.335e-05', 'entropy': '0.5487', 'num_tokens': '8.355e+05', 'mean_token_accuracy': '0.8098', 'epoch': '0.5845'}
+{'loss': '0.4813', 'grad_norm': '1.583', 'learning_rate': '6.958e-05', 'entropy': '0.49', 'num_tokens': '9.334e+05', 'mean_token_accuracy': '0.8225', 'epoch': '0.6575'}
+{'loss': '0.5115', 'grad_norm': '1.849', 'learning_rate': '6.58e-05', 'entropy': '0.5307', 'num_tokens': '1.033e+06', 'mean_token_accuracy': '0.813', 'epoch': '0.7306'}
+{'loss': '0.3973', 'grad_norm': '1.99', 'learning_rate': '6.203e-05', 'entropy': '0.4142', 'num_tokens': '1.121e+06', 'mean_token_accuracy': '0.8441', 'epoch': '0.8037'}
+{'loss': '0.3775', 'grad_norm': '1.792', 'learning_rate': '5.825e-05', 'entropy': '0.4147', 'num_tokens': '1.218e+06', 'mean_token_accuracy': '0.8551', 'epoch': '0.8767'}
+{'loss': '0.3927', 'grad_norm': '2.363', 'learning_rate': '5.448e-05', 'entropy': '0.4089', 'num_tokens': '1.321e+06', 'mean_token_accuracy': '0.849', 'epoch': '0.9498'}
+{'loss': '0.3294', 'grad_norm': '2.222', 'learning_rate': '5.071e-05', 'entropy': '0.3695', 'num_tokens': '1.444e+06', 'mean_token_accuracy': '0.8721', 'epoch': '1.023'}
+{'loss': '0.2682', 'grad_norm': '1.44', 'learning_rate': '4.693e-05', 'entropy': '0.3026', 'num_tokens': '1.556e+06', 'mean_token_accuracy': '0.8855', 'epoch': '1.096'}
+{'loss': '0.2636', 'grad_norm': '1.592', 'learning_rate': '4.316e-05', 'entropy': '0.3075', 'num_tokens': '1.656e+06', 'mean_token_accuracy': '0.8909', 'epoch': '1.169'}
+{'loss': '0.2291', 'grad_norm': '1.791', 'learning_rate': '3.939e-05', 'entropy': '0.2829', 'num_tokens': '1.739e+06', 'mean_token_accuracy': '0.9041', 'epoch': '1.242'}
+{'loss': '0.2493', 'grad_norm': '1.956', 'learning_rate': '3.561e-05', 'entropy': '0.2852', 'num_tokens': '1.84e+06', 'mean_token_accuracy': '0.8978', 'epoch': '1.315'}
+{'loss': '0.2325', 'grad_norm': '1.68', 'learning_rate': '3.184e-05', 'entropy': '0.2698', 'num_tokens': '1.953e+06', 'mean_token_accuracy': '0.9051', 'epoch': '1.388'}
+{'loss': '0.2186', 'grad_norm': '1.82', 'learning_rate': '2.807e-05', 'entropy': '0.2756', 'num_tokens': '2.087e+06', 'mean_token_accuracy': '0.9072', 'epoch': '1.461'}
+{'loss': '0.1926', 'grad_norm': '2.12', 'learning_rate': '2.429e-05', 'entropy': '0.2454', 'num_tokens': '2.195e+06', 'mean_token_accuracy': '0.9152', 'epoch': '1.534'}
+{'loss': '0.1622', 'grad_norm': '2.508', 'learning_rate': '2.052e-05', 'entropy': '0.205', 'num_tokens': '2.29e+06', 'mean_token_accuracy': '0.9316', 'epoch': '1.607'}
+{'loss': '0.168', 'grad_norm': '2.293', 'learning_rate': '1.675e-05', 'entropy': '0.2177', 'num_tokens': '2.375e+06', 'mean_token_accuracy': '0.9298', 'epoch': '1.68'}
+{'loss': '0.1675', 'grad_norm': '1.916', 'learning_rate': '1.297e-05', 'entropy': '0.2101', 'num_tokens': '2.476e+06', 'mean_token_accuracy': '0.9294', 'epoch': '1.753'}
+{'loss': '0.1488', 'grad_norm': '1.803', 'learning_rate': '9.198e-06', 'entropy': '0.1972', 'num_tokens': '2.574e+06', 'mean_token_accuracy': '0.9361', 'epoch': '1.826'}
+{'loss': '0.165', 'grad_norm': '2.022', 'learning_rate': '5.425e-06', 'entropy': '0.2134', 'num_tokens': '2.683e+06', 'mean_token_accuracy': '0.9283', 'epoch': '1.9'}
+{'loss': '0.1471', 'grad_norm': '4.14', 'learning_rate': '1.651e-06', 'entropy': '0.1931', 'num_tokens': '2.8e+06', 'mean_token_accuracy': '0.9367', 'epoch': '1.973'}
+✅✅ Training finished. Saving model to ckpt/conversion/qwen3_vl_4b_i_sft_lora_conversion/20260811_210433/...
+{'train_runtime': '5777', 'train_samples_per_second': '1.213', 'train_steps_per_second': '0.076', 'train_loss': '0.4507', 'entropy': '0.1745', 'num_tokens': '2.833e+06', 'mean_token_accuracy': '0.9459', 'epoch': '2'}
+✅✅ Training finished. Saving model to ckpt/conversion/qwen3_vl_4b_i_sft_lora_conversion/20260811_210433/...
+✅✅ Script completed.
+✅✅ Script completed.
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mqwen3_vl_4b_i_sft_lora_conversion_20260811_210433[0m at: [34mhttps://wandb.ai/kdeng03-proj/mol-llm/runs/bkuzji1a[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260811_210519-bkuzji1a/logs[0m

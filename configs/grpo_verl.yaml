@@ -1,0 +1,121 @@
+# VERL GRPO Configuration for Molecular Representation Tasks
+# Based on Qwen3-VL-4B-Instruct with LoRA
+# Task: mol-rep-conversion (text-to-text) and mol-rep-ocr (image-to-text)
+
+# Data configuration
+data:
+  train_files: ${HOME}/data/mol-rep-conversion/train.parquet
+  val_files: ${HOME}/data/mol-rep-conversion/val.parquet
+  train_batch_size: 8  # Total prompts per global step (matches TRL: per_device=1 * grad_accum=64 * devices=1 / 2 = 32 effective)
+  max_prompt_length: 2048
+  max_response_length: 1300  # Matches TRL max_completion_length
+  shuffle: true
+  seed: 42
+
+# Actor, Rollout, Reference model configuration
+actor_rollout_ref:
+  actor:
+    # Model configuration
+    path: kdeng03/MolQwen3-VL-4B-Instruct-SFT  # Base model from TRL trainer_configs
+    use_remove_padding: true
+    fsdp_config:
+      param_offload: true
+      optimizer_offload: true
+      fsdp_size: -1  # Use all GPUs
+      pp_size: 1
+      mp_size: 1
+      wrap_policy:
+        min_num_params: 0
+      memory_efficient_fsdp_wrap: true
+    
+    # Training configuration
+    optim:
+      lr: 5.0e-5  # Matches TRL
+      betas: [0.9, 0.95]
+      weight_decay: 0.01
+      warmup_steps_ratio: 0.03  # Matches TRL
+      total_epochs: 10  # Matches TRL
+      clip_grad: 1.0  # Matches TRL max_grad_norm
+      lr_scheduler: cosine  # Matches TRL
+    
+    # PPO/GRPO configuration
+    ppo_mini_batch_size: 32  # Must divide train_batch_size * rollout.n
+    ppo_epochs: 1  # Matches TRL num_iterations
+    clip_ratio: 0.2  # Matches TRL epsilon
+    loss_agg_mode: seq-mean-token-sum-norm  # DAPO-style normalization
+    use_kl_loss: false  # beta=0.0 in TRL
+    entropy_coeff: 0.0  # Matches TRL
+    
+    # Generation configuration
+    rollout:
+      name: vllm
+      tensor_model_parallel_size: 1
+      gpu_memory_utilization: 0.5  # Matches TRL
+      n: 8  # num_generations in TRL
+      temperature: 1.0
+      top_p: 1.0
+      top_k: -1
+      max_new_tokens: 1300  # Matches TRL max_completion_length
+      enable_chunked_prefill: false
+      enforce_eager: false
+      free_cache_engine: true
+      log_prob_use_dynamic_bsz: true
+      log_prob_max_token_len_per_gpu: 24576
+    
+    # Reference model for KL computation
+    ref:
+      log_prob_use_dynamic_bsz: true
+      log_prob_max_token_len_per_gpu: 24576
+      fsdp_config:
+        param_offload: true
+
+# Reward model configuration
+reward_model:
+  enable: false  # We use custom reward function, not a separate reward model
+
+reward:
+  reward_function: mol_reward.compute_score  # Custom reward function
+  reward_model:
+    enable: false
+
+# Algorithm configuration
+algorithm:
+  adv_estimator: grpo
+  norm_adv_by_std_in_grpo: true  # Group normalization (matches TRL scale_rewards: group)
+  gamma: 1.0
+  lam: 1.0
+
+# Trainer configuration
+trainer:
+  logger: ["console", "wandb"]
+  project_name: mol-llm
+  experiment_name: qwen3_vl_4b_i_grpo_lora_conversion_from_sft_lora_v1.1
+  n_gpus_per_node: 1  # Adjust based on your setup
+  nnodes: 1
+  save_freq: 1  # Save every epoch (matches TRL save_strategy: epoch)
+  test_freq: 1  # Test every epoch (matches TRL eval_strategy: epoch)
+  total_epochs: 10  # Matches TRL
+  default_local_dir: ckpt/conversion/grpo/qwen3_vl_4b_i_grpo_lora_conversion_from_sft_lora/v1.1/
+  default_hdfs_dir: null
+  
+  # Evaluation configuration
+  val_before_train: true
+  val_only: false
+  
+  # Checkpoint configuration
+  save_checkpoint:
+    path: null
+    hdfs_path: null
+    storage: null
+    max_to_keep: 2  # Keep last 2 checkpoints
+
+# Ray configuration
+ray_kwargs:
+  ray_init:
+    runtime_env:
+      env_vars:
+        HF_ENDPOINT: "https://hf-mirror.com"
+        HF_TOKEN: "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"
+        WANDB_MODE: "online"
+        WANDB_API_KEY: "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"
+        WANDB_PROJECT: "mol-llm"

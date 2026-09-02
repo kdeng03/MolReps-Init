@@ -1,0 +1,5 @@
+✅ Raw data: 100 molecules → text QA: 4380, ocr QA: 400
+✅ Text dataset: train=3504, test=876
+✅ OCR dataset: train=320, test=80
+✅ Uploaded text dataset to Hugging Face Hub with ID: kdeng03/mol-rep-conversion-v1.
+✅ Uploaded OCR dataset to Hugging Face Hub with ID: kdeng03/mol-rep-ocr-v1.

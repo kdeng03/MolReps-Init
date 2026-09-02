@@ -1,0 +1,4 @@
+model_name,num_samples,gt_valid_ratio,pred_valid_ratio,em_ratio,can_smiles_match_ratio,inchikey_match_ratio,tanimoto_sim_mean,tanimoto_sim_std
+qwen3_vl_4b_i,80.0,1.0,0.15,0.0,0.0,0.0,0.05248178287286415,0.15741954346508297
+qwen3_vl_4b_i_sft_lora_conversion,80.0,1.0,0.375,0.0,0.0,0.0,0.09357097516374095,0.1498823287311958
+qwen3_vl_4b_i_sft_lora_ocr,80.0,1.0,0.25,0.0,0.0,0.0,0.06311358390031696,0.13236466726984278

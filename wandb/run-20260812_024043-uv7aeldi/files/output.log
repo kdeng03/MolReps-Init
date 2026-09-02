@@ -1,0 +1,43 @@
+  0%|                                                                                                 | 0/40 [00:00<?, ?it/s]/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/utils/checkpoint.py:232: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  check_backward_validity(args)
+100%|████████████████████████████████████████████████████████████████████████████████████████| 40/40 [09:00<00:00, 13.51s/it]
+{'loss': '1.433', 'grad_norm': '0.8124', 'learning_rate': '6.579e-05', 'entropy': '0.9133', 'num_tokens': '5.962e+04', 'mean_token_accuracy': '0.6793', 'epoch': '0.8'}
+{'loss': '1.001', 'grad_norm': '0.8526', 'learning_rate': '2.368e-05', 'entropy': '1.036', 'num_tokens': '1.173e+05', 'mean_token_accuracy': '0.7033', 'epoch': '1.6'}
+{'train_runtime': '543.8', 'train_samples_per_second': '1.177', 'train_steps_per_second': '0.074', 'train_loss': '1.143', 'entropy': '0.8647', 'num_tokens': '1.453e+05', 'mean_token_accuracy': '0.7237', 'epoch': '2'}
+✅✅ OCR Training finished.
+Traceback (most recent call last):
+  File "/root/mol-llm/scripts/sft.py", line 355, in <module>
+    main(script_args, sft_config, model_config)
+  File "/root/mol-llm/scripts/sft.py", line 334, in main
+    trainer2 = SFTTrainer(
+               ^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 1336, in __init__
+    super().__init__(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/base_trainer.py", line 74, in __init__
+    super().__init__(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 414, in __init__
+    self.create_accelerator_and_postprocess()
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 823, in create_accelerator_and_postprocess
+    self.accelerator = Accelerator(**args)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/accelerate/accelerator.py", line 357, in __init__
+    raise NotImplementedError(
+NotImplementedError: You cannot pass in a `deepspeed_plugin` when creating a second `Accelerator`. Please make sure the first `Accelerator` is initialized with all the plugins you want to use.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/mol-llm/scripts/sft.py", line 355, in <module>
+[rank0]:     main(script_args, sft_config, model_config)
+[rank0]:   File "/root/mol-llm/scripts/sft.py", line 334, in main
+[rank0]:     trainer2 = SFTTrainer(
+[rank0]:                ^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 1336, in __init__
+[rank0]:     super().__init__(
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/base_trainer.py", line 74, in __init__
+[rank0]:     super().__init__(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 414, in __init__
+[rank0]:     self.create_accelerator_and_postprocess()
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 823, in create_accelerator_and_postprocess
+[rank0]:     self.accelerator = Accelerator(**args)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/accelerate/accelerator.py", line 357, in __init__
+[rank0]:     raise NotImplementedError(
+[rank0]: NotImplementedError: You cannot pass in a `deepspeed_plugin` when creating a second `Accelerator`. Please make sure the first `Accelerator` is initialized with all the plugins you want to use.

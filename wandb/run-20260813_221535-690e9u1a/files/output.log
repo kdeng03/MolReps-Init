@@ -1,0 +1,18 @@
+ 30%|███████████████████████████████████▋                                                                                   | 120/400 [11:20<26:27,  5.67s/it] 
+{'loss': '1.599', 'grad_norm': '1.001', 'learning_rate': '9.923e-05', 'entropy': '0.8124', 'num_tokens': '5.986e+04', 'mean_token_accuracy': '0.6534', 'epoch': '0.8'}
+                                                                                                                                                              
+{'eval_loss': '1.174', 'eval_runtime': '8.189', 'eval_samples_per_second': '9.769', 'eval_steps_per_second': '9.769', 'eval_entropy': '1.251', 'eval_num_tokens': '7.441e+04', 'eval_mean_token_accuracy': '0.6709', 'epoch': '1'}
+{'loss': '1.011', 'grad_norm': '0.7903', 'learning_rate': '9.51e-05', 'entropy': '1.088', 'num_tokens': '1.174e+05', 'mean_token_accuracy': '0.7035', 'epoch': '1.6'}
+{'eval_loss': '0.8645', 'eval_runtime': '7.368', 'eval_samples_per_second': '10.86', 'eval_steps_per_second': '10.86', 'eval_entropy': '0.8126', 'eval_num_tokens': '1.488e+05', 'eval_mean_token_accuracy': '0.7245', 'epoch': '2'}
+{'loss': '0.7591', 'grad_norm': '1.221', 'learning_rate': '9.098e-05', 'entropy': '0.7608', 'num_tokens': '1.789e+05', 'mean_token_accuracy': '0.7523', 'epoch': '2.4'}
+{'eval_loss': '0.7638', 'eval_runtime': '7.61', 'eval_samples_per_second': '10.51', 'eval_steps_per_second': '10.51', 'eval_entropy': '0.6926', 'eval_num_tokens': '2.232e+05', 'eval_mean_token_accuracy': '0.7538', 'epoch': '3'}
+{'loss': '0.6216', 'grad_norm': '0.9181', 'learning_rate': '8.686e-05', 'entropy': '0.6348', 'num_tokens': '2.365e+05', 'mean_token_accuracy': '0.7917', 'epoch': '3.2'}
+{'loss': '0.5243', 'grad_norm': '1.08', 'learning_rate': '8.273e-05', 'entropy': '0.5304', 'num_tokens': '2.976e+05', 'mean_token_accuracy': '0.8209', 'epoch': '4'}
+{'eval_loss': '0.7218', 'eval_runtime': '7.253', 'eval_samples_per_second': '11.03', 'eval_steps_per_second': '11.03', 'eval_entropy': '0.5619', 'eval_num_tokens': '2.976e+05', 'eval_mean_token_accuracy': '0.7739', 'epoch': '4'}
+{'loss': '0.4013', 'grad_norm': '1.694', 'learning_rate': '7.861e-05', 'entropy': '0.4221', 'num_tokens': '3.574e+05', 'mean_token_accuracy': '0.8582', 'epoch': '4.8'}
+{'eval_loss': '0.7374', 'eval_runtime': '7.432', 'eval_samples_per_second': '10.76', 'eval_steps_per_second': '10.76', 'eval_entropy': '0.4495', 'eval_num_tokens': '3.72e+05', 'eval_mean_token_accuracy': '0.7813', 'epoch': '5'}
+{'loss': '0.3199', 'grad_norm': '1.234', 'learning_rate': '7.448e-05', 'entropy': '0.347', 'num_tokens': '4.177e+05', 'mean_token_accuracy': '0.8847', 'epoch': '5.6'}
+{'eval_loss': '0.7724', 'eval_runtime': '7.393', 'eval_samples_per_second': '10.82', 'eval_steps_per_second': '10.82', 'eval_entropy': '0.4011', 'eval_num_tokens': '4.465e+05', 'eval_mean_token_accuracy': '0.7858', 'epoch': '6'}
+{'train_runtime': '684.3', 'train_samples_per_second': '9.353', 'train_steps_per_second': '0.585', 'train_loss': '0.7198', 'epoch': '6'}
+✅✅ Training finished. Saving model to ckpt/ocr/qwen3_vl_4b_i_sft_lora_ocr/v1/20260813_221433/...
+✅✅ Script completed.

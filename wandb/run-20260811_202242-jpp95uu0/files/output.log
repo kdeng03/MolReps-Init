@@ -1,0 +1,9 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████| 80/80 [03:23<00:00,  2.55s/it]
+{'loss': '1.545', 'grad_norm': '1.471', 'learning_rate': '8.442e-05', 'entropy': '0.9555', 'num_tokens': '3.167e+04', 'mean_token_accuracy': '0.6497', 'epoch': '0.4'}
+{'loss': '1.001', 'grad_norm': '1.078', 'learning_rate': '6.364e-05', 'entropy': '0.9878', 'num_tokens': '5.962e+04', 'mean_token_accuracy': '0.7005', 'epoch': '0.8'}
+{'loss': '0.9024', 'grad_norm': '1.098', 'learning_rate': '4.286e-05', 'entropy': '0.9701', 'num_tokens': '8.671e+04', 'mean_token_accuracy': '0.7141', 'epoch': '1.2'}
+{'loss': '0.7559', 'grad_norm': '1.157', 'learning_rate': '2.208e-05', 'entropy': '0.7589', 'num_tokens': '1.173e+05', 'mean_token_accuracy': '0.7527', 'epoch': '1.6'}
+{'loss': '0.73', 'grad_norm': '1.472', 'learning_rate': '1.299e-06', 'entropy': '0.7282', 'num_tokens': '1.453e+05', 'mean_token_accuracy': '0.7629', 'epoch': '2'}
+{'train_runtime': '207.5', 'train_samples_per_second': '3.085', 'train_steps_per_second': '0.386', 'train_loss': '0.9868', 'epoch': '2'}
+✅✅ Training finished. Saving model to ckpt/ocr/qwen3_vl_4b_i_sft_lora_ocr/20260811_202150/...
+✅✅ Script completed.

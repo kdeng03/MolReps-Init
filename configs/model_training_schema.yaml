@@ -1,0 +1,403 @@
+mol_rep_conversion:
+  code_name: conversion
+  sft: 
+    qwen3_4b_i_sft_lora_conversion:
+      model_modality: llm
+      parent_model_name: qwen3_4b_i
+      parent_training_method: base
+      training_method: sft_lora
+
+      distribution_configs:
+        is_use: false
+        method: null
+        num_machines: 1
+        num_processes: 1
+
+      dataset_configs:
+        conversion:
+            dataset_id: kdeng03/mol-rep-conversion-v1.1
+            dataset_split: train
+
+      # For transformers
+      model_init_kwargs:
+        model_name_or_path: Qwen/Qwen3-4B-Instruct-2507
+
+      # For SFTConfig
+      sft_configs:
+        max_length: 8192 # max 12500
+        per_device_train_batch_size: 1
+        gradient_accumulation_steps: 16
+        gradient_checkpointing: true
+        gradient_checkpointing_kwargs:
+          use_reentrant: false
+        learning_rate: 1.0e-4
+        num_train_epochs: 10
+
+        packing: false
+        packing_strategy: bfd
+        # assistant_only_loss: true
+
+        ### Logging
+        logging_strategy: steps
+        logging_steps: 16
+
+        ### Eval
+        eval_strategy: epoch
+        eval_steps: null
+        per_device_eval_batch_size: 1
+        eval_accumulation_steps: 1
+
+        ### Save
+        save_strategy: epoch
+        save_steps: null
+
+        ### Best model tracking
+        load_best_model_at_end: true
+        metric_for_best_model: eval_loss
+        greater_is_better: false
+
+        warmup_ratio: 0.03
+
+      # For Trainer
+      trainer_configs:
+        callbacks:
+          EarlyStoppingCallback:
+            early_stopping_patience: 2
+            early_stopping_threshold: 0.0
+
+      # For LoraConfig
+      lora_configs:
+        r: 16
+        lora_alpha: 32
+        lora_dropout: 0.05
+        target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "up_proj", "down_proj", "gate_proj"]
+
+
+    qwen3_vl_4b_i_sft_lora_conversion:
+      model_modality: vlm
+      parent_model_name: qwen3_vl_4b_i
+      parent_training_method: base
+      training_method: sft_lora
+
+      distribution_configs:
+        is_use: false
+        method: null
+        num_machines: 1
+        num_processes: 1
+
+      dataset_configs:
+        conversion:
+            dataset_id: kdeng03/mol-rep-conversion-v1.1
+            dataset_split: train
+
+      # For transformers
+      model_init_kwargs:
+        # model_name_or_path: Qwen/Qwen3-VL-4B-Instruct
+        model_name_or_path: kdeng03/MolQwen3-VL-4B-Instruct-SFT ### Stage2: Based no stage1 model (epoch=10)
+
+      # For SFTConfig
+      sft_configs:
+        max_length: 11300
+        per_device_train_batch_size: 2
+        gradient_accumulation_steps: 8
+        learning_rate: 1.0e-4
+        num_train_epochs: 10
+
+        model_init_kwargs:
+          dtype: bfloat16
+
+        # assistant_only_loss: true
+
+        ### Logging
+        logging_strategy: steps
+        logging_steps: 0.002
+
+        ### Eval
+        eval_strategy: epoch
+        eval_steps: null
+        eval_on_start: true
+        per_device_eval_batch_size: 1
+        eval_accumulation_steps: 1
+
+        ### Save
+        save_strategy: epoch
+        save_steps: null
+
+        ### Best model tracking
+        load_best_model_at_end: true
+        metric_for_best_model: eval_loss
+        greater_is_better: false
+
+        warmup_ratio: 0.03
+
+      # For Trainer
+      trainer_configs:
+        callbacks:
+          EarlyStoppingCallback:
+            early_stopping_patience: 2
+            early_stopping_threshold: 0.0
+
+      # For LoraConfig
+      lora_configs:
+        r: 16
+        lora_alpha: 32
+        lora_dropout: 0.05
+        target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "up_proj", "down_proj", "gate_proj"]
+
+
+  rl:
+    grpo:
+      qwen3_vl_4b_i_grpo_lora_conversion_from_sft_lora:
+        model_modality: vlm
+        parent_model_name: qwen3_vl_4b_i_sft_lora_conversion
+        parent_training_method: sft_lora
+        training_method: grpo_lora
+
+        distribution_configs:
+          is_use: false
+          method: null
+          num_machines: 1
+          num_processes: 1
+
+        dataset_configs:
+          conversion:
+              dataset_id: kdeng03/mol-rep-conversion-v1.1
+              dataset_split: extra_train, train
+
+        # For GRPOConfig
+        grpo_configs:
+          # For GRPOConfig
+          model_init_kwargs: 
+            dtype: bfloat16
+
+          num_generations: 8
+          max_completion_length: 1300
+
+          use_vllm: true
+          vllm_mode: colocate
+
+          vllm_gpu_memory_utilization: 0.5
+          vllm_max_model_length: 11300
+          vllm_enable_sleep_mode: true
+
+          ### GRPO Algorithm related
+          beta: 0.0
+          epsilon: 0.2
+          scale_rewards: group
+          loss_type: dapo
+          top_entropy_quantile: 1.0 ### Baseline
+          entropy_coef: 0.0
+          use_adaptive_entropy: false ### Baseline
+          entropy_target: 0.02
+          
+          log_completions: true
+          num_completions_to_print: 4
+          log_unique_prompts: false
+
+          # For TrainingArguments
+          per_device_train_batch_size: 1
+          gradient_accumulation_steps: 256 # ebs=32 (1*32*8 = 256), for each optim step, 32 prompts are used.
+          num_train_epochs: 10
+
+          learning_rate: 1.0e-5
+          # lr_scheduler_type: linear
+          # lr_scheduler_type: constant_with_warmup
+          lr_scheduler_type: cosine
+          warmup_steps: 0.03
+
+          ### Logging
+          logging_strategy: steps
+          # logging_steps: 0.002
+          logging_steps: 1 ### Debug
+
+          ### Eval
+          eval_strategy: epoch
+          eval_steps: null
+          eval_on_start: true
+          per_device_eval_batch_size: 8
+          eval_accumulation_steps: 1
+
+          ### Save
+          save_strategy: epoch
+          save_steps: null
+
+          ### Best model tracking
+          load_best_model_at_end: true
+          metric_for_best_model: eval_reward
+          greater_is_better: true
+        
+        # For GRPOTrainer
+        trainer_configs:
+          # model: kdeng03/MolQwen3-VL-4B-Instruct-SFT
+          model: kdeng03/MolQwen3-VL-4B-Instruct-SFT-Epoch4
+          callbacks:
+            EarlyStoppingCallback:
+              early_stopping_patience: 6
+              early_stopping_threshold: 0.0
+
+        # For LoraConfig
+        lora_configs:
+          r: 16
+          lora_alpha: 32
+          lora_dropout: 0.05
+          target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "up_proj", "down_proj", "gate_proj"]
+
+
+mol_rep_ocr:
+  code_name: ocr
+  sft:
+    qwen3_vl_4b_i_sft_lora_ocr:
+      model_modality: vlm
+      parent_model_name: qwen3_vl_4b_i
+      parent_training_method: base
+      training_method: sft_lora
+
+      distribution_configs:
+        is_use: false
+        method: null
+        num_machines: 1
+        num_processes: 1
+
+      dataset_configs:
+        ocr:
+            dataset_id: kdeng03/mol-rep-ocr-v1.1
+            dataset_split: train
+
+      # For transformers
+      model_init_kwargs:
+        model_name_or_path: Qwen/Qwen3-VL-4B-Instruct
+        attn_implementation: kernels-community/flash-attn2
+
+      # For SFTConfig
+      sft_configs:
+        num_train_epochs: 10
+        learning_rate: 1.0e-4
+        max_length: 2048
+
+        per_device_train_batch_size: 1
+        gradient_accumulation_steps: 16
+
+        activation_offloading: false
+        gradient_checkpointing: true
+        gradient_checkpointing_kwargs:
+          use_reentrant: false
+
+        # assistant_only_loss: true
+
+        ### Logging
+        logging_strategy: steps
+        logging_steps: 16
+
+        ### Eval
+        eval_strategy: epoch
+        eval_steps: null
+        per_device_eval_batch_size: 1
+        eval_accumulation_steps: 1
+
+        ### Save
+        save_strategy: epoch
+        save_steps: null
+
+        ### Best model tracking
+        load_best_model_at_end: true
+        metric_for_best_model: eval_loss
+        greater_is_better: false
+
+        warmup_ratio: 0.03
+
+      # For Trainer
+      trainer_configs:
+        callbacks:
+          EarlyStoppingCallback:
+            early_stopping_patience: 2
+            early_stopping_threshold: 0.0
+
+      # For LoraConfig
+      lora_configs:
+        r: 16
+        lora_alpha: 32
+        lora_dropout: 0.05
+        target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "up_proj", "down_proj", "gate_proj"]
+
+  rl:
+    grpo: null
+
+
+mol_rep_ocr_conversion:
+  code_name: ocr_conversion
+  sft: 
+    qwen3_vl_4b_i_sft_lora_ocr_conversion:
+      model_modality: vlm
+      parent_model_name: qwen3_vl_4b_i_sft_lora_ocr
+      parent_training_method: sft_lora
+      training_method: sft_lora
+
+      dataset_configs:
+        ocr:
+          dataset_id: kdeng03/mol-rep-ocr-v1.1
+          dataset_split: train
+        conversion:
+          dataset_id: kdeng03/mol-rep-conversion-v1.1
+          dataset_split: train
+
+      distribution_configs:
+        is_use: false
+        method: null
+        num_machines: 1
+        num_processes: 1
+
+      # For transformers
+      model_init_kwargs:
+        model_name_or_path: kdeng03/MolQwen3-VL-4B-Instruct-SFT-OCR
+
+      # For SFTConfig
+      sft_configs:
+        max_length: 6000
+        per_device_train_batch_size: 2
+        gradient_accumulation_steps: 8
+        gradient_checkpointing: true
+        gradient_checkpointing_kwargs:
+          use_reentrant: false
+        learning_rate: 1.0e-4
+        num_train_epochs: 10
+
+        model_init_kwargs:
+          dtype: bfloat16
+
+        # assistant_only_loss: true
+
+        ### Logging
+        logging_strategy: steps
+        logging_steps: 16
+
+        ### Eval
+        eval_strategy: epoch
+        eval_steps: null
+        per_device_eval_batch_size: 1
+        eval_accumulation_steps: 1
+
+        ### Save
+        save_strategy: epoch
+        save_steps: null
+
+        ### Best model tracking
+        load_best_model_at_end: true
+        metric_for_best_model: eval_loss
+        greater_is_better: false
+
+        warmup_ratio: 0.03
+
+      # For Trainer
+      trainer_configs:
+        callbacks:
+          EarlyStoppingCallback:
+            early_stopping_patience: 3
+            early_stopping_threshold: 0.0
+
+      # For LoraConfig
+      lora_configs:
+        r: 16
+        lora_alpha: 32
+        lora_dropout: 0.05
+        target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "up_proj", "down_proj", "gate_proj"]
+

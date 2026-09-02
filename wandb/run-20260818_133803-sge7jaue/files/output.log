@@ -1,0 +1,487 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai
+  0%|                                                                                                | 0/120 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.18s/it]
+
+
+  0%|                                                                                                | 0/872 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.17s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.17s/it]
+
+  0%|▏                                                                                       | 2/872 [00:05<40:37,  2.80s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+
+  0%|▎                                                                                     | 3/872 [00:13<1:11:25,  4.93s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.15s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.15s/it]
+
+  0%|▍                                                                                     | 4/872 [00:19<1:16:11,  5.27s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.17s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+
+  1%|▍                                                                                     | 5/872 [00:39<2:33:19, 10.61s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.08s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.08s/it]
+
+  1%|▌                                                                                     | 6/872 [00:45<2:09:29,  8.97s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+
+  1%|▋                                                                                     | 7/872 [00:51<1:54:37,  7.95s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.11s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.11s/it]
+
+  1%|▊                                                                                     | 8/872 [00:56<1:42:26,  7.11s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.13s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.13s/it]
+
+  1%|▉                                                                                     | 9/872 [01:03<1:41:42,  7.07s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.18s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.18s/it]
+
+  1%|▉                                                                                    | 10/872 [01:10<1:40:01,  6.96s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.12s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.12s/it]
+
+  1%|█                                                                                    | 11/872 [01:16<1:35:36,  6.66s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.13s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.13s/it]
+
+  1%|█▏                                                                                   | 12/872 [01:22<1:34:52,  6.62s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.11s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.11s/it]
+
+  1%|█▎                                                                                   | 13/872 [01:30<1:38:12,  6.86s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+
+  2%|█▎                                                                                   | 14/872 [01:40<1:50:51,  7.75s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+
+  2%|█▍                                                                                   | 15/872 [01:46<1:43:07,  7.22s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.19s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.19s/it]
+
+  2%|█▌                                                                                   | 16/872 [01:52<1:39:23,  6.97s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+
+  2%|█▋                                                                                   | 17/872 [02:00<1:41:31,  7.12s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.22s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.22s/it]
+
+  2%|█▊                                                                                   | 18/872 [02:06<1:37:14,  6.83s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.19s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.19s/it]
+
+  2%|█▊                                                                                   | 19/872 [02:12<1:36:30,  6.79s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.23s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.23s/it]
+
+  2%|█▉                                                                                   | 20/872 [02:19<1:37:24,  6.86s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.17s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.17s/it]
+
+  2%|██                                                                                   | 21/872 [02:26<1:37:57,  6.91s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.15s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.15s/it]
+
+  3%|██▏                                                                                  | 22/872 [02:33<1:36:00,  6.78s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.25s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.24s/it]
+
+  3%|██▏                                                                                  | 23/872 [02:41<1:40:41,  7.12s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.17s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.17s/it]
+
+  3%|██▎                                                                                  | 24/872 [02:47<1:34:59,  6.72s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.10s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.10s/it]
+
+  3%|██▍                                                                                  | 25/872 [02:53<1:34:50,  6.72s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.15s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.15s/it]
+
+  3%|██▌                                                                                  | 26/872 [02:59<1:31:14,  6.47s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.24s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.24s/it]
+
+  3%|██▋                                                                                  | 27/872 [03:04<1:24:44,  6.02s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.08s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.08s/it]
+
+  3%|██▋                                                                                  | 28/872 [03:10<1:25:01,  6.04s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+
+  3%|██▊                                                                                  | 29/872 [03:16<1:23:55,  5.97s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.66s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.66s/it]
+
+  3%|██▉                                                                                  | 30/872 [03:24<1:31:09,  6.50s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+
+  4%|███                                                                                  | 31/872 [03:29<1:26:12,  6.15s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+
+  4%|███                                                                                  | 32/872 [03:35<1:24:45,  6.05s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.11s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.11s/it]
+
+  4%|███▏                                                                                 | 33/872 [03:45<1:42:25,  7.33s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+
+  4%|███▎                                                                                 | 34/872 [03:52<1:38:06,  7.02s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+
+  4%|███▍                                                                                 | 35/872 [03:58<1:36:24,  6.91s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.23s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.23s/it]
+
+  4%|███▌                                                                                 | 36/872 [04:03<1:29:01,  6.39s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.25s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.25s/it]
+
+  4%|███▌                                                                                 | 37/872 [04:09<1:27:30,  6.29s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+
+  4%|███▋                                                                                 | 38/872 [04:16<1:29:30,  6.44s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+
+  4%|███▊                                                                                 | 39/872 [04:23<1:31:36,  6.60s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.17s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.17s/it]
+
+  5%|███▉                                                                                 | 40/872 [04:32<1:38:53,  7.13s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.20s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.20s/it]
+
+  5%|███▉                                                                                 | 41/872 [04:37<1:31:59,  6.64s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.19s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.19s/it]
+
+  5%|████                                                                                 | 42/872 [04:43<1:27:40,  6.34s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+
+  5%|████▏                                                                                | 43/872 [04:51<1:34:52,  6.87s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.33s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.33s/it]
+
+  5%|████▎                                                                                | 44/872 [05:00<1:42:56,  7.46s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.35s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.35s/it]
+
+  5%|████▍                                                                                | 45/872 [05:05<1:35:49,  6.95s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.34s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.34s/it]
+
+  5%|████▍                                                                                | 46/872 [05:14<1:41:42,  7.39s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+
+  5%|████▌                                                                                | 47/872 [05:25<1:55:29,  8.40s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+
+  6%|████▋                                                                                | 48/872 [05:31<1:46:09,  7.73s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.32s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.32s/it]
+
+  6%|████▊                                                                                | 49/872 [05:38<1:43:46,  7.57s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+
+  6%|████▊                                                                                | 50/872 [05:44<1:37:41,  7.13s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.20s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.20s/it]
+
+  6%|████▉                                                                                | 51/872 [05:51<1:37:14,  7.11s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.12s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.12s/it]
+
+  6%|█████                                                                                | 52/872 [05:57<1:33:24,  6.83s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.11s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.11s/it]
+
+  6%|█████▏                                                                               | 53/872 [06:02<1:26:11,  6.31s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.15s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.15s/it]
+
+  6%|█████▎                                                                               | 54/872 [06:10<1:32:54,  6.81s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+
+  6%|█████▎                                                                               | 55/872 [06:16<1:26:30,  6.35s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+
+  6%|█████▍                                                                               | 56/872 [06:21<1:21:42,  6.01s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.34s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.34s/it]
+
+  7%|█████▌                                                                               | 57/872 [06:26<1:17:34,  5.71s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+
+  7%|█████▋                                                                               | 58/872 [06:37<1:40:01,  7.37s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.47s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.46s/it]
+
+  7%|█████▊                                                                               | 59/872 [06:48<1:55:24,  8.52s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.42s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.42s/it]
+
+  7%|█████▊                                                                               | 60/872 [06:56<1:53:05,  8.36s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.50s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.50s/it]
+
+  7%|█████▉                                                                               | 61/872 [07:02<1:42:06,  7.55s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.42s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.42s/it]
+
+  7%|██████                                                                               | 62/872 [07:08<1:35:07,  7.05s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.32s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+
+  7%|██████▏                                                                              | 63/872 [07:13<1:28:30,  6.56s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.33s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.33s/it]
+
+  7%|██████▏                                                                              | 64/872 [07:19<1:24:10,  6.25s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.40s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.40s/it]
+
+  7%|██████▎                                                                              | 65/872 [07:26<1:25:59,  6.39s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.35s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.35s/it]
+
+  8%|██████▍                                                                              | 66/872 [07:43<2:10:39,  9.73s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.66s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.66s/it]
+
+  8%|██████▌                                                                              | 67/872 [07:53<2:12:05,  9.84s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+
+  8%|██████▋                                                                              | 68/872 [08:00<1:58:57,  8.88s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.42s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.42s/it]
+
+  8%|██████▋                                                                              | 69/872 [08:05<1:45:03,  7.85s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+
+  8%|██████▊                                                                              | 70/872 [08:12<1:38:59,  7.41s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+
+  8%|██████▉                                                                              | 71/872 [08:18<1:36:14,  7.21s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+
+  8%|███████                                                                              | 72/872 [08:25<1:34:44,  7.11s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+
+  8%|███████                                                                              | 73/872 [08:31<1:28:38,  6.66s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.30s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.30s/it]
+
+  8%|███████▏                                                                             | 74/872 [08:39<1:34:04,  7.07s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+
+  9%|███████▎                                                                             | 75/872 [08:46<1:36:11,  7.24s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.13s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.12s/it]
+
+  9%|███████▍                                                                             | 76/872 [08:52<1:27:22,  6.59s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.13s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.13s/it]
+
+  9%|███████▌                                                                             | 77/872 [08:58<1:26:31,  6.53s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+
+  9%|███████▌                                                                             | 78/872 [09:07<1:35:24,  7.21s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.45s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.45s/it]
+
+  9%|███████▋                                                                             | 79/872 [09:14<1:34:50,  7.18s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+
+  9%|███████▊                                                                             | 80/872 [09:20<1:29:21,  6.77s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.46s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.46s/it]
+
+  9%|███████▉                                                                             | 81/872 [09:25<1:23:34,  6.34s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.39s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.39s/it]
+
+  9%|███████▉                                                                             | 82/872 [09:31<1:21:36,  6.20s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.39s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.39s/it]
+
+ 10%|████████                                                                             | 83/872 [09:38<1:25:48,  6.52s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+
+ 10%|████████▏                                                                            | 84/872 [09:45<1:26:13,  6.57s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.40s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.39s/it]
+
+ 10%|████████▎                                                                            | 85/872 [09:54<1:37:29,  7.43s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+
+ 10%|████████▍                                                                            | 86/872 [10:00<1:31:53,  7.01s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.39s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+
+ 10%|████████▍                                                                            | 87/872 [10:06<1:25:20,  6.52s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+
+ 10%|████████▌                                                                            | 88/872 [10:11<1:19:41,  6.10s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+
+ 10%|████████▋                                                                            | 89/872 [10:19<1:26:51,  6.66s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+
+ 10%|████████▊                                                                            | 90/872 [10:27<1:33:35,  7.18s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.33s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.33s/it]
+
+ 10%|████████▊                                                                            | 91/872 [10:33<1:29:56,  6.91s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+
+ 11%|████████▉                                                                            | 92/872 [10:39<1:26:00,  6.62s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+
+ 11%|█████████                                                                            | 93/872 [10:49<1:38:53,  7.62s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.28s/it]
+
+ 11%|█████████▏                                                                           | 94/872 [10:56<1:34:25,  7.28s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+
+ 11%|█████████▎                                                                           | 95/872 [11:02<1:30:42,  7.00s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+
+ 11%|█████████▎                                                                           | 96/872 [11:08<1:25:55,  6.64s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.23s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.23s/it]
+
+ 11%|█████████▍                                                                           | 97/872 [11:15<1:28:48,  6.88s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+
+ 11%|█████████▌                                                                           | 98/872 [11:24<1:34:23,  7.32s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+
+ 11%|█████████▋                                                                           | 99/872 [11:29<1:26:17,  6.70s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+
+ 11%|█████████▋                                                                          | 100/872 [11:34<1:21:22,  6.32s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+
+ 12%|█████████▋                                                                          | 101/872 [11:42<1:24:56,  6.61s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.33s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.33s/it]
+
+ 12%|█████████▊                                                                          | 102/872 [11:48<1:24:57,  6.62s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.42s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.42s/it]
+
+ 12%|█████████▉                                                                          | 103/872 [11:55<1:24:20,  6.58s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+
+ 12%|██████████                                                                          | 104/872 [12:01<1:22:02,  6.41s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.36s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.36s/it]
+
+ 12%|██████████                                                                          | 105/872 [12:10<1:31:18,  7.14s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.34s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.34s/it]
+
+ 12%|██████████▏                                                                         | 106/872 [12:19<1:39:27,  7.79s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.14s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.13s/it]
+
+ 12%|██████████▎                                                                         | 107/872 [12:25<1:30:31,  7.10s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.30s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.30s/it]
+
+ 12%|██████████▍                                                                         | 108/872 [12:31<1:27:08,  6.84s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.29s/it]
+
+ 12%|██████████▌                                                                         | 109/872 [12:36<1:22:07,  6.46s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.31s/it]
+
+ 13%|██████████▌                                                                         | 110/872 [12:42<1:19:47,  6.28s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.27s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+
+ 13%|██████████▋                                                                         | 111/872 [12:48<1:19:11,  6.24s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+
+ 13%|██████████▊                                                                         | 112/872 [12:55<1:21:00,  6.40s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+
+ 13%|██████████▉                                                                         | 113/872 [13:01<1:20:16,  6.35s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.25s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.25s/it]
+
+ 13%|██████████▉                                                                         | 114/872 [13:06<1:15:31,  5.98s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+
+ 13%|███████████                                                                         | 115/872 [13:12<1:13:15,  5.81s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.26s/it]
+
+ 13%|███████████▏                                                                        | 116/872 [13:17<1:11:14,  5.65s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.10s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.10s/it]
+
+ 13%|███████████▎                                                                        | 117/872 [13:23<1:10:04,  5.57s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.10s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.10s/it]
+
+ 14%|███████████▎                                                                        | 118/872 [13:29<1:14:56,  5.96s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.38s/it]
+
+ 14%|███████████▍                                                                        | 119/872 [13:36<1:17:48,  6.20s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:03<00:00,  3.12s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:03<00:00,  3.11s/it]
+
+ 14%|███████████▌                                                                        | 120/872 [13:45<1:25:52,  6.85s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.45s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.45s/it]

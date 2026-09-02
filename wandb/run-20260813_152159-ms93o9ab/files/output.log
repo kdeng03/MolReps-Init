@@ -1,0 +1,99 @@
+ 47%|████████████████████████████████████▍                                        | 311/657 [27:51<30:51,  5.35s/it]Traceback (most recent call last):
+{'loss': '1.781', 'grad_norm': '1.077', 'learning_rate': '7.5e-05', 'entropy': '0.7206', 'num_tokens': '1.055e+05', 'mean_token_accuracy': '0.6296', 'epoch': '0.07314'}
+{'loss': '1.118', 'grad_norm': '1.057', 'learning_rate': '9.827e-05', 'entropy': '1.225', 'num_tokens': '1.838e+05', 'mean_token_accuracy': '0.6614', 'epoch': '0.1463'}
+{'loss': '0.9319', 'grad_norm': '1.089', 'learning_rate': '9.576e-05', 'entropy': '0.9119', 'num_tokens': '2.919e+05', 'mean_token_accuracy': '0.7093', 'epoch': '0.2194'}
+{'loss': '0.8721', 'grad_norm': '1.105', 'learning_rate': '9.325e-05', 'entropy': '0.8804', 'num_tokens': '3.773e+05', 'mean_token_accuracy': '0.7177', 'epoch': '0.2926'}
+{'loss': '0.7439', 'grad_norm': '1.317', 'learning_rate': '9.074e-05', 'entropy': '0.7395', 'num_tokens': '4.749e+05', 'mean_token_accuracy': '0.7491', 'epoch': '0.3657'}
+{'loss': '0.6796', 'grad_norm': '1.837', 'learning_rate': '8.823e-05', 'entropy': '0.6853', 'num_tokens': '5.76e+05', 'mean_token_accuracy': '0.7652', 'epoch': '0.4389'}
+{'loss': '0.6139', 'grad_norm': '1.765', 'learning_rate': '8.571e-05', 'entropy': '0.6155', 'num_tokens': '6.669e+05', 'mean_token_accuracy': '0.7877', 'epoch': '0.512'}
+{'loss': '0.5965', 'grad_norm': '1.824', 'learning_rate': '8.32e-05', 'entropy': '0.5982', 'num_tokens': '7.677e+05', 'mean_token_accuracy': '0.7969', 'epoch': '0.5851'}
+{'loss': '0.5504', 'grad_norm': '2.351', 'learning_rate': '8.069e-05', 'entropy': '0.5441', 'num_tokens': '8.715e+05', 'mean_token_accuracy': '0.8089', 'epoch': '0.6583'}
+{'loss': '0.4989', 'grad_norm': '1.432', 'learning_rate': '7.818e-05', 'entropy': '0.5151', 'num_tokens': '9.704e+05', 'mean_token_accuracy': '0.8251', 'epoch': '0.7314'}
+{'loss': '0.4987', 'grad_norm': '7.962', 'learning_rate': '7.567e-05', 'entropy': '0.5012', 'num_tokens': '1.076e+06', 'mean_token_accuracy': '0.8251', 'epoch': '0.8046'}
+{'loss': '0.4594', 'grad_norm': '1.716', 'learning_rate': '7.316e-05', 'entropy': '0.4646', 'num_tokens': '1.159e+06', 'mean_token_accuracy': '0.8372', 'epoch': '0.8777'}
+{'loss': '0.4235', 'grad_norm': '1.58', 'learning_rate': '7.064e-05', 'entropy': '0.4286', 'num_tokens': '1.254e+06', 'mean_token_accuracy': '0.8497', 'epoch': '0.9509'}
+{'loss': '0.3993', 'grad_norm': '1.976', 'learning_rate': '6.813e-05', 'entropy': '0.409', 'num_tokens': '1.36e+06', 'mean_token_accuracy': '0.8584', 'epoch': '1.023'}
+{'loss': '0.3178', 'grad_norm': '2.447', 'learning_rate': '6.562e-05', 'entropy': '0.3371', 'num_tokens': '1.459e+06', 'mean_token_accuracy': '0.885', 'epoch': '1.096'}
+{'loss': '0.2922', 'grad_norm': '2.166', 'learning_rate': '6.311e-05', 'entropy': '0.3173', 'num_tokens': '1.548e+06', 'mean_token_accuracy': '0.8963', 'epoch': '1.169'}
+{'loss': '0.2853', 'grad_norm': '2.434', 'learning_rate': '6.06e-05', 'entropy': '0.2872', 'num_tokens': '1.629e+06', 'mean_token_accuracy': '0.8961', 'epoch': '1.242'}
+{'loss': '0.2936', 'grad_norm': '1.805', 'learning_rate': '5.808e-05', 'entropy': '0.3159', 'num_tokens': '1.72e+06', 'mean_token_accuracy': '0.8958', 'epoch': '1.315'}
+{'loss': '0.2611', 'grad_norm': '1.75', 'learning_rate': '5.557e-05', 'entropy': '0.2745', 'num_tokens': '1.827e+06', 'mean_token_accuracy': '0.905', 'epoch': '1.389'}
+  File "/root/mol-llm/scripts/sft.py", line 353, in <module>
+    main(script_args, sft_config, model_config)
+  File "/root/mol-llm/scripts/sft.py", line 278, in main
+    trainer.train()
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1519, in _inner_training_loop
+    self._run_epoch(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1747, in _run_epoch
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 1842, in training_step
+    return super().training_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1949, in training_step
+    self.accelerator.backward(loss, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/accelerate/accelerator.py", line 2850, in backward
+    loss.backward(**kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/_tensor.py", line 631, in backward
+    torch.autograd.backward(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/autograd/__init__.py", line 381, in backward
+    _engine_run_backward(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/autograd/graph.py", line 869, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/utils/checkpoint.py", line 1173, in unpack_hook
+    _run_fn_with_dynamo_disabled(frame.recompute_fn, *args)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py", line 1263, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/utils/checkpoint.py", line 1139, in _run_fn_with_dynamo_disabled
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/utils/checkpoint.py", line 1607, in recompute_fn
+    fn(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 567, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 525, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/peft/tuners/lora/layer.py", line 1058, in forward
+    result = result + lora_B(lora_A(dropout(x))) * scaling
+                                    ^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/dropout.py", line 73, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/functional.py", line 1443, in dropout
+    _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 294.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 164.69 MiB is free. Including non-PyTorch memory, this process has 23.35 GiB memory in use. Of the allocated memory 21.77 GiB is allocated by PyTorch, and 1.16 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

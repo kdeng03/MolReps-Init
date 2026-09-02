@@ -1,0 +1,1 @@
+{"train/learning_rate":7.315541601255887e-05,"train/mean_token_accuracy":0.8351970566436648,"train/loss":0.46123263239860535,"_timestamp":1.7866093741486535e+09,"_runtime":1066,"train/grad_norm":1.74601149559021,"_step":11,"train/epoch":0.8777142857142857,"train/num_tokens":1.159003e+06,"train/global_step":192,"train/entropy":0.46446603335789405,"_wandb":{"runtime":1066}}

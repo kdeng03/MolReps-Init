@@ -1,0 +1,29 @@
+  0%|                                                                                                                         | 0/400 [00:00<?, ?it/s][transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+ 16%|██████████████████▏                                                                                             | 65/400 [10:18<50:33,  9.05s/it]Traceback (most recent call last):
+{'loss': '1.729', 'grad_norm': '1.366', 'learning_rate': '9.923e-05', 'num_tokens': '5.619e+04', 'mean_token_accuracy': '0.6366', 'epoch': '0.4'}
+{'loss': '1.041', 'grad_norm': '1.418', 'learning_rate': '9.51e-05', 'num_tokens': '1.144e+05', 'mean_token_accuracy': '0.6911', 'epoch': '0.8'}
+  File "/root/mol-llm/scripts/sft.py", line 457, in <module>                                                                                          
+{'eval_loss': '0.9095', 'eval_runtime': '17.45', 'eval_samples_per_second': '4.586', 'eval_steps_per_second': '4.586', 'eval_num_tokens': '1.411e+05', 'eval_mean_token_accuracy': '0.6983', 'epoch': '1'}
+{'loss': '0.7498', 'grad_norm': '1.013', 'learning_rate': '9.098e-05', 'num_tokens': '1.699e+05', 'mean_token_accuracy': '0.7523', 'epoch': '1.2'}
+{'loss': '0.7009', 'grad_norm': '0.9801', 'learning_rate': '8.686e-05', 'num_tokens': '2.277e+05', 'mean_token_accuracy': '0.767', 'epoch': '1.6'}
+    main(script_args, sft_config, model_config)
+  File "/root/mol-llm/scripts/sft.py", line 319, in main
+    trainer.train()
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1519, in _inner_training_loop
+    self._run_epoch(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1747, in _run_epoch
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 1842, in training_step
+    return super().training_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1919, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 1803, in compute_loss
+    num_tokens_in_batch = self.accelerator.gather_for_metrics(inputs["attention_mask"].sum()).sum().item()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,85 @@
+Wed Aug 12 00:27:53 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.105.08             Driver Version: 580.105.08     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4090 D      On  |   00000000:17:00.0 Off |                  Off |
+| 30%   30C    P0             37W /  425W |       0MiB /  24564MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+🚀🚀 Script starts...
+output_model_dir='ckpt/conversion/qwen3_4b_i_sft_lora_conversion/20260812_002807/'
+Using LoRA with config: peft_config=LoraConfig(task_type=None, peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, peft_version='0.20.0', base_model_name_or_path=None, revision=None, inference_mode=False, r=16, target_modules={'v_proj', 'o_proj', 'gate_proj', 'k_proj', 'down_proj', 'up_proj', 'q_proj'}, exclude_modules=None, lora_alpha=32, lora_dropout=0.05, fan_in_fan_out=False, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', trainable_token_indices=None, loftq_config={}, eva_config=None, corda_config=None, lora_ga_config=None, use_dora=False, velora_config=None, alora_invocation_tokens=None, use_qalora=False, qalora_group_size=16, monteclora_config=None, layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False), lora_bias=False, target_parameters=None, use_bdlora=None, arrow_config=None, ensure_weight_tying=False)
+Training args: training_args=SFTConfig(output_dir='ckpt/conversion/qwen3_4b_i_sft_lora_conversion/20260812_002807/', per_device_train_batch_size=1, num_train_epochs=2, max_steps=-1, learning_rate=0.0001, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, lr_scheduler_kwargs=None, warmup_steps=0.03, optim=<OptimizerNames.ADAMW_TORCH_FUSED: 'adamw_torch_fused'>, optim_args=None, weight_decay=0.0, adam_beta1=0.9, adam_beta2=0.999, adam_epsilon=1e-08, optim_target_modules=None, gradient_accumulation_steps=8, average_tokens_across_devices=True, max_grad_norm=1.0, label_smoothing_factor=0.0, bf16=True, fp16=False, bf16_full_eval=False, fp16_full_eval=False, tf32=None, gradient_checkpointing=True, gradient_checkpointing_kwargs={'use_reentrant': False}, torch_compile=False, torch_compile_backend=None, torch_compile_mode=None, use_liger_kernel=False, liger_kernel_config=None, use_cache=False, neftune_noise_alpha=None, torch_empty_cache_steps=None, auto_find_batch_size=False, logging_strategy=<IntervalStrategy.STEPS: 'steps'>, logging_steps=16, logging_first_step=False, log_on_each_node=True, logging_nan_inf_filter=True, include_num_input_tokens_seen='no', log_level='passive', log_level_replica='warning', disable_tqdm=False, report_to=['wandb'], run_name='qwen3_4b_i_sft_lora_conversion_20260812_002807', project='huggingface', trackio_space_id=None, trackio_bucket_id=None, trackio_static_space_id=None, eval_strategy=<IntervalStrategy.NO: 'no'>, eval_steps=None, eval_delay=0, per_device_eval_batch_size=8, prediction_loss_only=False, eval_on_start=False, eval_do_concat_batches=True, eval_use_gather_object=False, eval_accumulation_steps=None, include_for_metrics=[], batch_eval_metrics=False, save_only_model=False, save_strategy=<SaveStrategy.STEPS: 'steps'>, save_steps=100, save_on_each_node=False, save_total_limit=None, enable_jit_checkpoint=False, push_to_hub=False, hub_token=None, hub_private_repo=None, hub_model_id=None, hub_strategy=<HubStrategy.EVERY_SAVE: 'every_save'>, hub_always_push=False, hub_revision=None, load_best_model_at_end=False, metric_for_best_model=None, greater_is_better=None, ignore_data_skip=False, restore_callback_states_from_checkpoint=False, full_determinism=False, seed=42, data_seed=None, use_cpu=False, accelerator_config=AcceleratorConfig(split_batches=False, dispatch_batches=None, even_batches=True, use_seedable_sampler=True, non_blocking=False, gradient_accumulation_kwargs=None, use_configured_state=False), parallelism_config=None, dataloader_drop_last=False, dataloader_num_workers=0, dataloader_pin_memory=True, dataloader_persistent_workers=False, dataloader_prefetch_factor=None, remove_unused_columns=True, label_names=None, train_sampling_strategy='random', length_column_name='length', ddp_find_unused_parameters=None, ddp_bucket_cap_mb=None, ddp_broadcast_buffers=None, ddp_static_graph=None, ddp_backend=None, ddp_timeout=1800, fsdp=None, fsdp_config=None, deepspeed=None, debug=[], skip_memory_metrics=True, do_train=False, do_eval=False, do_predict=False, resume_from_checkpoint=None, warmup_ratio=0.03, logging_dir=None, local_rank=-1, model_init_kwargs=None, router_aux_loss_coef=0.001, trust_remote_code=False, chat_template_path=None, dataset_text_field='text', dataset_kwargs=None, dataset_num_proc=None, eos_token=None, max_length=512, truncation_mode='keep_start', shuffle_dataset=False, packing=False, packing_strategy='bfd', padding_free=False, pad_to_multiple_of=None, eval_packing=None, completion_only_loss=None, assistant_only_loss=False, loss_type='chunked_nll', activation_offloading=False, pad_token=None)
+🕙🕙 Start training...
+{'loss': '1.926', 'grad_norm': '1.15', 'learning_rate': '5.556e-05', 'entropy': '1.149', 'num_tokens': '1.425e+04', 'mean_token_accuracy': '0.5306', 'epoch': '0.03653'}
+{'loss': '1.29', 'grad_norm': '0.7787', 'learning_rate': '9.953e-05', 'entropy': '1.821', 'num_tokens': '2.789e+04', 'mean_token_accuracy': '0.5766', 'epoch': '0.07306'}
+{'loss': '0.9891', 'grad_norm': '0.7802', 'learning_rate': '9.764e-05', 'entropy': '1.279', 'num_tokens': '4.4e+04', 'mean_token_accuracy': '0.6194', 'epoch': '0.1096'}
+{'loss': '0.9201', 'grad_norm': '0.7267', 'learning_rate': '9.576e-05', 'entropy': '1.137', 'num_tokens': '5.923e+04', 'mean_token_accuracy': '0.6543', 'epoch': '0.1461'}
+{'loss': '0.9122', 'grad_norm': '1.275', 'learning_rate': '9.388e-05', 'entropy': '1.071', 'num_tokens': '7.23e+04', 'mean_token_accuracy': '0.664', 'epoch': '0.1826'}
+{'loss': '0.7577', 'grad_norm': '0.7145', 'learning_rate': '9.199e-05', 'entropy': '0.9101', 'num_tokens': '8.717e+04', 'mean_token_accuracy': '0.7033', 'epoch': '0.2192'}
+{'loss': '0.6588', 'grad_norm': '1.134', 'learning_rate': '9.011e-05', 'entropy': '0.7955', 'num_tokens': '1.02e+05', 'mean_token_accuracy': '0.7409', 'epoch': '0.2557'}
+{'loss': '0.6764', 'grad_norm': '1.268', 'learning_rate': '8.822e-05', 'entropy': '0.7886', 'num_tokens': '1.167e+05', 'mean_token_accuracy': '0.7378', 'epoch': '0.2922'}
+{'loss': '0.5771', 'grad_norm': '2.096', 'learning_rate': '8.634e-05', 'entropy': '0.755', 'num_tokens': '1.315e+05', 'mean_token_accuracy': '0.751', 'epoch': '0.3288'}
+{'loss': '0.5323', 'grad_norm': '2.242', 'learning_rate': '8.445e-05', 'entropy': '0.6571', 'num_tokens': '1.464e+05', 'mean_token_accuracy': '0.79', 'epoch': '0.3653'}
+{'loss': '0.4804', 'grad_norm': '2.287', 'learning_rate': '8.257e-05', 'entropy': '0.5546', 'num_tokens': '1.619e+05', 'mean_token_accuracy': '0.822', 'epoch': '0.4018'}
+{'loss': '0.4972', 'grad_norm': '1.415', 'learning_rate': '8.068e-05', 'entropy': '0.5703', 'num_tokens': '1.743e+05', 'mean_token_accuracy': '0.811', 'epoch': '0.4384'}
+{'loss': '0.4609', 'grad_norm': '1.886', 'learning_rate': '7.88e-05', 'entropy': '0.511', 'num_tokens': '1.867e+05', 'mean_token_accuracy': '0.8239', 'epoch': '0.4749'}
+{'loss': '0.3871', 'grad_norm': '1.995', 'learning_rate': '7.691e-05', 'entropy': '0.475', 'num_tokens': '2.043e+05', 'mean_token_accuracy': '0.8501', 'epoch': '0.5114'}
+{'loss': '0.361', 'grad_norm': '1.308', 'learning_rate': '7.503e-05', 'entropy': '0.4341', 'num_tokens': '2.187e+05', 'mean_token_accuracy': '0.8548', 'epoch': '0.5479'}
+{'loss': '0.359', 'grad_norm': '2.087', 'learning_rate': '7.314e-05', 'entropy': '0.4', 'num_tokens': '2.336e+05', 'mean_token_accuracy': '0.8742', 'epoch': '0.5845'}
+{'loss': '0.3489', 'grad_norm': '2.37', 'learning_rate': '7.126e-05', 'entropy': '0.3912', 'num_tokens': '2.487e+05', 'mean_token_accuracy': '0.8711', 'epoch': '0.621'}
+{'loss': '0.2758', 'grad_norm': '1.47', 'learning_rate': '6.938e-05', 'entropy': '0.3257', 'num_tokens': '2.64e+05', 'mean_token_accuracy': '0.8969', 'epoch': '0.6575'}
+{'loss': '0.3274', 'grad_norm': '2.364', 'learning_rate': '6.749e-05', 'entropy': '0.3543', 'num_tokens': '2.798e+05', 'mean_token_accuracy': '0.8918', 'epoch': '0.6941'}
+{'loss': '0.2639', 'grad_norm': '2.923', 'learning_rate': '6.561e-05', 'entropy': '0.3146', 'num_tokens': '2.954e+05', 'mean_token_accuracy': '0.9044', 'epoch': '0.7306'}
+{'loss': '0.2375', 'grad_norm': '2.326', 'learning_rate': '6.372e-05', 'entropy': '0.2814', 'num_tokens': '3.106e+05', 'mean_token_accuracy': '0.9137', 'epoch': '0.7671'}
+{'loss': '0.1805', 'grad_norm': '2.624', 'learning_rate': '6.184e-05', 'entropy': '0.2482', 'num_tokens': '3.269e+05', 'mean_token_accuracy': '0.922', 'epoch': '0.8037'}
+{'loss': '0.1909', 'grad_norm': '3.249', 'learning_rate': '5.995e-05', 'entropy': '0.2456', 'num_tokens': '3.408e+05', 'mean_token_accuracy': '0.9229', 'epoch': '0.8402'}
+{'loss': '0.1675', 'grad_norm': '2.883', 'learning_rate': '5.807e-05', 'entropy': '0.2247', 'num_tokens': '3.558e+05', 'mean_token_accuracy': '0.9303', 'epoch': '0.8767'}
+{'loss': '0.1822', 'grad_norm': '4.296', 'learning_rate': '5.618e-05', 'entropy': '0.2426', 'num_tokens': '3.719e+05', 'mean_token_accuracy': '0.9227', 'epoch': '0.9132'}
+{'loss': '0.1558', 'grad_norm': '2.633', 'learning_rate': '5.43e-05', 'entropy': '0.2191', 'num_tokens': '3.87e+05', 'mean_token_accuracy': '0.9279', 'epoch': '0.9498'}
+{'loss': '0.1572', 'grad_norm': '1.97', 'learning_rate': '5.241e-05', 'entropy': '0.2028', 'num_tokens': '4.036e+05', 'mean_token_accuracy': '0.9329', 'epoch': '0.9863'}
+{'loss': '0.1249', 'grad_norm': '1.148', 'learning_rate': '5.053e-05', 'entropy': '0.1905', 'num_tokens': '4.166e+05', 'mean_token_accuracy': '0.9411', 'epoch': '1.023'}
+{'loss': '0.1196', 'grad_norm': '1.945', 'learning_rate': '4.865e-05', 'entropy': '0.1847', 'num_tokens': '4.307e+05', 'mean_token_accuracy': '0.9383', 'epoch': '1.059'}
+{'loss': '0.1176', 'grad_norm': '1.51', 'learning_rate': '4.676e-05', 'entropy': '0.1694', 'num_tokens': '4.472e+05', 'mean_token_accuracy': '0.9423', 'epoch': '1.096'}
+{'loss': '0.1133', 'grad_norm': '1.528', 'learning_rate': '4.488e-05', 'entropy': '0.1674', 'num_tokens': '4.625e+05', 'mean_token_accuracy': '0.9418', 'epoch': '1.132'}
+{'loss': '0.09834', 'grad_norm': '2.346', 'learning_rate': '4.299e-05', 'entropy': '0.157', 'num_tokens': '4.781e+05', 'mean_token_accuracy': '0.9493', 'epoch': '1.169'}
+{'loss': '0.1133', 'grad_norm': '1.629', 'learning_rate': '4.111e-05', 'entropy': '0.179', 'num_tokens': '4.921e+05', 'mean_token_accuracy': '0.938', 'epoch': '1.205'}
+{'loss': '0.1095', 'grad_norm': '1.716', 'learning_rate': '3.922e-05', 'entropy': '0.1775', 'num_tokens': '5.051e+05', 'mean_token_accuracy': '0.9398', 'epoch': '1.242'}
+{'loss': '0.09732', 'grad_norm': '0.9855', 'learning_rate': '3.734e-05', 'entropy': '0.1788', 'num_tokens': '5.202e+05', 'mean_token_accuracy': '0.9429', 'epoch': '1.279'}
+{'loss': '0.09891', 'grad_norm': '2.427', 'learning_rate': '3.545e-05', 'entropy': '0.1604', 'num_tokens': '5.355e+05', 'mean_token_accuracy': '0.9446', 'epoch': '1.315'}
+{'loss': '0.09159', 'grad_norm': '1.239', 'learning_rate': '3.357e-05', 'entropy': '0.1528', 'num_tokens': '5.499e+05', 'mean_token_accuracy': '0.9497', 'epoch': '1.352'}
+{'loss': '0.08893', 'grad_norm': '1.707', 'learning_rate': '3.168e-05', 'entropy': '0.1381', 'num_tokens': '5.652e+05', 'mean_token_accuracy': '0.9511', 'epoch': '1.388'}
+{'loss': '0.07926', 'grad_norm': '0.6016', 'learning_rate': '2.98e-05', 'entropy': '0.1488', 'num_tokens': '5.816e+05', 'mean_token_accuracy': '0.9524', 'epoch': '1.425'}
+{'loss': '0.09306', 'grad_norm': '1.218', 'learning_rate': '2.792e-05', 'entropy': '0.1471', 'num_tokens': '5.959e+05', 'mean_token_accuracy': '0.9465', 'epoch': '1.461'}
+{'loss': '0.08105', 'grad_norm': '2.09', 'learning_rate': '2.603e-05', 'entropy': '0.1434', 'num_tokens': '6.118e+05', 'mean_token_accuracy': '0.9511', 'epoch': '1.498'}
+{'loss': '0.07591', 'grad_norm': '1.122', 'learning_rate': '2.415e-05', 'entropy': '0.1245', 'num_tokens': '6.281e+05', 'mean_token_accuracy': '0.9544', 'epoch': '1.534'}
+{'loss': '0.07421', 'grad_norm': '1.772', 'learning_rate': '2.226e-05', 'entropy': '0.1336', 'num_tokens': '6.431e+05', 'mean_token_accuracy': '0.9532', 'epoch': '1.571'}
+{'loss': '0.07094', 'grad_norm': '0.8466', 'learning_rate': '2.038e-05', 'entropy': '0.1335', 'num_tokens': '6.583e+05', 'mean_token_accuracy': '0.9513', 'epoch': '1.607'}
+{'loss': '0.08317', 'grad_norm': '0.5468', 'learning_rate': '1.849e-05', 'entropy': '0.1445', 'num_tokens': '6.725e+05', 'mean_token_accuracy': '0.9475', 'epoch': '1.644'}
+{'loss': '0.07173', 'grad_norm': '0.6671', 'learning_rate': '1.661e-05', 'entropy': '0.1272', 'num_tokens': '6.872e+05', 'mean_token_accuracy': '0.9537', 'epoch': '1.68'}
+{'loss': '0.06952', 'grad_norm': '0.5523', 'learning_rate': '1.472e-05', 'entropy': '0.1299', 'num_tokens': '7.022e+05', 'mean_token_accuracy': '0.9507', 'epoch': '1.717'}
+{'loss': '0.0666', 'grad_norm': '1.58', 'learning_rate': '1.284e-05', 'entropy': '0.1311', 'num_tokens': '7.189e+05', 'mean_token_accuracy': '0.9485', 'epoch': '1.753'}
+{'loss': '0.0707', 'grad_norm': '0.9319', 'learning_rate': '1.095e-05', 'entropy': '0.1187', 'num_tokens': '7.332e+05', 'mean_token_accuracy': '0.9577', 'epoch': '1.79'}
+{'loss': '0.06828', 'grad_norm': '0.6465', 'learning_rate': '9.069e-06', 'entropy': '0.137', 'num_tokens': '7.474e+05', 'mean_token_accuracy': '0.9509', 'epoch': '1.826'}
+{'loss': '0.06294', 'grad_norm': '0.5912', 'learning_rate': '7.185e-06', 'entropy': '0.122', 'num_tokens': '7.623e+05', 'mean_token_accuracy': '0.9544', 'epoch': '1.863'}
+{'loss': '0.06954', 'grad_norm': '0.8763', 'learning_rate': '5.3e-06', 'entropy': '0.126', 'num_tokens': '7.773e+05', 'mean_token_accuracy': '0.9524', 'epoch': '1.9'}
+{'loss': '0.07002', 'grad_norm': '0.6808', 'learning_rate': '3.416e-06', 'entropy': '0.1194', 'num_tokens': '7.912e+05', 'mean_token_accuracy': '0.951', 'epoch': '1.936'}
+{'loss': '0.06429', 'grad_norm': '0.4965', 'learning_rate': '1.531e-06', 'entropy': '0.1254', 'num_tokens': '8.063e+05', 'mean_token_accuracy': '0.9517', 'epoch': '1.973'}
+{'train_runtime': '1884', 'train_samples_per_second': '3.72', 'train_steps_per_second': '0.465', 'train_loss': '0.3043', 'entropy': '0.1168', 'num_tokens': '8.18e+05', 'mean_token_accuracy': '0.9562', 'epoch': '2'}
+✅✅ Training finished. Saving model to ckpt/conversion/qwen3_4b_i_sft_lora_conversion/20260812_002807/...
+✅✅ Script completed.
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mqwen3_4b_i_sft_lora_conversion_20260812_002807[0m at: [34mhttps://wandb.ai/kdeng03-proj/mol-llm/runs/apwp9zpx[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260812_002839-apwp9zpx/logs[0m

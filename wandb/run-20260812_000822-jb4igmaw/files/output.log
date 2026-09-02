@@ -1,0 +1,4 @@
+ 13%|████████████████▋                                                                                                             | 58/438 [12:32<1:22:21, 13.00s/it]
+{'loss': '1.762', 'grad_norm': '0.6522', 'learning_rate': '9.976e-05', 'entropy': '1.174', 'num_tokens': '2.789e+04', 'mean_token_accuracy': '0.5828', 'epoch': '0.07306'}
+{'loss': '1.095', 'grad_norm': '0.8999', 'learning_rate': '9.599e-05', 'entropy': '1.402', 'num_tokens': '5.923e+04', 'mean_token_accuracy': '0.6332', 'epoch': '0.1461'}
+{'loss': '0.9324', 'grad_norm': '0.5434', 'learning_rate': '9.222e-05', 'entropy': '1.049', 'num_tokens': '8.717e+04', 'mean_token_accuracy': '0.6655', 'epoch': '0.2192'}

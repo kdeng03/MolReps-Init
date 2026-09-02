@@ -1,0 +1,157 @@
+# Schema for molecule representation conversion tasks.
+
+conventions:
+  task_id_format: "{task_type}:{input_rep_type}->{output_rep_type}"
+  # Fields that uniquely identify a molecule record.
+  molecule_key_fields:
+    - can_smiles
+    - iupac
+    - inchi
+    - inchikey
+  # Fields of prompt and completion for each example.
+  qa_fields:
+    - prompt
+    - completion
+  # Fields that compose each generated example.
+  record_fields:
+    - task_id
+    - task_type
+    - input_rep_type
+    - input_rep
+    - output_rep_type
+    - output_rep
+    - qa_template
+  instruction_style: short_imperative
+
+record_schema:
+  fields:
+    task_id:
+      type: string
+      description: Stable identifier for the example.
+    task_type:
+      type: string
+      enum: [ocr, can_reps_translation, iupac_understanding, cml_understanding, intra_rep_normalization, cross_rep_normalization]
+      description: High-level task class.
+    input_rep_type:
+      type: string
+      description: Source representation name.
+    input_rep:
+      type: object
+      description: Source representation content. Can be image for ocr task_type.
+    output_rep_type:
+      type: string
+      description: Target representation name.
+    output_rep:
+      type: string
+      description: Target representation content.
+    prompt:
+      type: string
+      description: Rendered prompt string (qa_template filled with input_rep_type, input_rep, output_rep_type).
+    completion:
+      type: string
+      description: Target completion text; identical to output_rep.
+    qa_template:
+      type: string
+      description: The specific template string used to generate this prompt-completion pair.
+
+task_types:
+  ocr:
+    category: image_to_canonical
+    description: Extract canonical representations from molecular 2D structure images.
+    input_rep_types: [mol_image]
+    output_rep_types: [can_smiles, can_selfies, can_deepsmiles, inchi]
+    pair_strategy: one_to_many
+    qa_templates:
+      - "What is the {output_rep_type} of the molecule shown in this image?"
+      - "Extract the {output_rep_type} from this molecular structure image:"
+      - "This image contains a molecule; give me its {output_rep_type}."
+      - "Look at this molecular image and tell me its {output_rep_type}."
+      - "Convert the molecule in this image to its {output_rep_type}."
+      - "Please provide the {output_rep_type} for the molecule depicted above."
+    expected_count_per_molecule: 4
+
+  can_reps_translation:
+    category: canonical_to_canonical
+    description: Translate between canonical molecular representations.
+    input_rep_types: [can_smiles, can_selfies, can_deepsmiles, inchi]
+    output_rep_types: [can_smiles, can_selfies, can_deepsmiles, inchi]
+    pair_strategy: full_cross
+    include_self_pairs: false
+    qa_templates:
+      - "Please convert {input_rep}: from {input_rep_type} to {output_rep_type}."
+      - "I have a molecule in {input_rep_type}: {input_rep}. What does it look like in {output_rep_type}?"
+      - "The {input_rep_type} {input_rep} — express this as {output_rep_type}."
+      - "Given {input_rep}: (in {input_rep_type}), give me the {output_rep_type}."
+      - "Transform {input_rep} from {input_rep_type} to {output_rep_type}:"
+      - "What is the {output_rep_type} of this molecule? {input_rep}"
+    expected_count_per_molecule: 12
+
+  iupac_understanding:
+    category: iupac_to_canonical
+    description: Map IUPAC names to canonical representations.
+    input_rep_types: [iupac]
+    output_rep_types: [can_smiles, can_selfies, can_deepsmiles, inchi]
+    pair_strategy: one_to_many
+    qa_templates:
+      - "The IUPAC name is {input_rep}. What is its {output_rep_type}?"
+      - "What {output_rep_type} corresponds to the compound named {input_rep}?"
+      - "{input_rep} — give me the {output_rep_type} for this molecule."
+      - "I know the name {input_rep}, please convert it to {output_rep_type}."
+      - "A molecule called {input_rep}: output its {output_rep_type}."
+      - "For the chemical name {input_rep}, what is the {output_rep_type}?"
+    expected_count_per_molecule: 4
+
+  cml_understanding:
+    category: cml_to_canonical
+    description: Map CML representations to canonical representations.
+    input_rep_types: [cml]
+    output_rep_types: [can_smiles, can_selfies, can_deepsmiles, inchi]
+    pair_strategy: one_to_many
+    qa_templates:
+      - "Parse this CML and tell me its {output_rep_type}: {input_rep}"
+      - "Here is a molecule serialized as CML: {input_rep}. What is the {output_rep_type}?"
+      - "CML representation {input_rep} — convert it to {output_rep_type}."
+      - "The following CML describes a molecule: {input_rep}. Give its {output_rep_type}."
+      - "I have CML data {input_rep}, extract the {output_rep_type} from it."
+      - "Read this CML and output the {output_rep_type}: {input_rep}"
+    expected_count_per_molecule: 4
+
+  intra_rep_normalization:
+    category: random_reptype1_to_canonical_reptype1
+    description: Normalize randomized variants to canonical forms within the same representation family.
+    input_rep_types: [random_smiles, random_selfies, random_deepsmiles]
+    output_rep_types: [can_smiles, can_selfies, can_deepsmiles]
+    pair_strategy: same_family
+    qa_templates:
+      - "Canonicalize this {input_rep_type}: {input_rep}"
+      - "The {input_rep_type} {input_rep} is not in standard form. Write its canonical version."
+      - "Here is a randomized {input_rep_type}: {input_rep}. Give me the canonical one."
+      - "Fix the {input_rep_type} notation in canonical way: {input_rep}"
+      - "Standardize this (make it canonical): {input_rep}"
+      - "Please normalize {input_rep} to its canonical {output_rep_type}."
+    expected_count_per_molecule: "3N"
+
+  cross_rep_normalization:
+    category: random_reptype1_to_canonical_reptype2
+    description: Normalize randomized variants to canonical forms across different representation families.
+    input_rep_types: [random_smiles, random_selfies, random_deepsmiles]
+    output_rep_types: [can_smiles, can_selfies, can_deepsmiles, inchi]
+    pair_strategy: cross_family
+    exclude_same_family_pairs: true
+    qa_templates:
+      - "This {input_rep_type} {input_rep} may not be canonical. Normalize it and output as {output_rep_type}."
+      - "Clean up the randomized {input_rep_type} {input_rep} and give me the {output_rep_type}."
+      - "From this messy {input_rep_type} {input_rep}, derive the clean {output_rep_type}."
+      - "{input_rep_type}: {input_rep}. Turn this into standardized {output_rep_type}."
+      - "I have a non-standard {input_rep_type} {input_rep}, please convert to canonical {output_rep_type}."
+      - "Take {input_rep} (a noisy {input_rep_type}) and express it as proper {output_rep_type}."
+    expected_count_per_molecule: "9N"
+
+summary:
+  ocr: 4
+  can_reps_translation: 12
+  iupac_understanding: 4
+  cml_understanding: 4
+  intra_rep_normalization: "3N"
+  cross_rep_normalization: "9N"
+  total_per_molecule: "24 + 12N"

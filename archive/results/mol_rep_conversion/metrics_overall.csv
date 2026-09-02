@@ -1,0 +1,2 @@
+,num_samples,gt_valid_ratio,pred_valid_ratio,em_ratio,can_smiles_match_ratio,inchikey_match_ratio,tanimoto_sim_mean,tanimoto_sim_std
+Metrics,876.0,1.0,0.1552511415525114,0.001141552511415525,0.05593607305936073,0.05593607305936073,0.08048351307373013,0.2545766955278603

@@ -1,0 +1,42 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai
+  0%|                                                                                                                                                                       | 0/4370 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.97s/it]
+
+  0%|                                                                                                                                                            | 1/4370 [01:05<79:11:55, 65.26s/it]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.60s/it]
+
+  0%|                                                                                                                                                          | 2/4370 [03:46<147:50:52, 121.85s/it]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.65s/it]
+
+  0%|                                                                                                                                                           | 3/4370 [04:50<115:25:50, 95.16s/it]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:03<00:00,  3.08s/it]
+
+  0%|▏                                                                                                                                                         | 4/4370 [09:25<201:51:18, 166.44s/it]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.15s/it]
+
+  0%|▏                                                                                                                                                         | 5/4370 [11:56<194:44:27, 160.61s/it]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+
+  0%|▏                                                                                                                                                         | 6/4370 [14:58<203:34:28, 167.94s/it]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.49s/it]
+
+  0%|▏                                                                                                                                                         | 7/4370 [17:24<194:54:26, 160.82s/it]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.14s/it]
+
+  0%|▎                                                                                                                                                         | 8/4370 [27:19<362:32:07, 299.20s/it]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.57s/it]
+
+  0%|▎                                                                                                                                                         | 9/4370 [31:15<338:22:10, 279.32s/it]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.21s/it]

@@ -1,0 +1,557 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai
+  0%|                                                                                                                                                                        | 0/420 [00:00<?, ?it/s]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.81s/it]
+
+
+  0%|                                                                                                                                                                        | 0/220 [00:00<?, ?it/s]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.05s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.05s/it]
+
+  1%|█▍                                                                                                                                                              | 2/220 [00:07<13:08,  3.62s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.02s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.02s/it]
+
+  1%|██▏                                                                                                                                                             | 3/220 [00:16<22:17,  6.16s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.98s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.98s/it]
+
+  2%|██▉                                                                                                                                                             | 4/220 [00:21<20:34,  5.72s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.05s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.05s/it]
+
+  2%|███▋                                                                                                                                                            | 5/220 [00:27<19:55,  5.56s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.03s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.03s/it]
+
+  3%|████▎                                                                                                                                                           | 6/220 [00:31<18:21,  5.15s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  2.00s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  2.00s/it]
+
+  3%|█████                                                                                                                                                           | 7/220 [00:36<18:15,  5.14s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.01s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.01s/it]
+
+  4%|█████▊                                                                                                                                                          | 8/220 [00:44<21:01,  5.95s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.97s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.97s/it]
+
+  4%|██████▌                                                                                                                                                         | 9/220 [00:54<24:59,  7.11s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.96s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.96s/it]
+
+  5%|███████▏                                                                                                                                                       | 10/220 [01:00<23:50,  6.81s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.98s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.98s/it]
+
+  5%|███████▉                                                                                                                                                       | 11/220 [01:05<22:01,  6.32s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.02s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.02s/it]
+
+  5%|████████▋                                                                                                                                                      | 12/220 [01:12<22:35,  6.52s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.99s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.99s/it]
+
+  6%|█████████▍                                                                                                                                                     | 13/220 [01:18<22:24,  6.50s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.04s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.04s/it]
+
+  6%|██████████                                                                                                                                                     | 14/220 [01:23<20:38,  6.01s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.02s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.02s/it]
+
+  7%|██████████▊                                                                                                                                                    | 15/220 [01:29<20:38,  6.04s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.06s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.06s/it]
+
+  7%|███████████▌                                                                                                                                                   | 16/220 [01:36<21:31,  6.33s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.05s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.05s/it]
+
+  8%|████████████▎                                                                                                                                                  | 17/220 [01:43<22:12,  6.57s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.07s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.07s/it]
+
+  8%|█████████████                                                                                                                                                  | 18/220 [01:51<23:02,  6.85s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.08s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.08s/it]
+
+  9%|█████████████▋                                                                                                                                                 | 19/220 [01:56<21:15,  6.35s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.07s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.07s/it]
+                                                                                                                                                                                                     --- Logging error ---
+Traceback (most recent call last):                                                                                                                                  | 20/220 [02:01<19:47,  5.94s/it]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+  File "/root/miniconda3/envs/vllm/lib/python3.12/logging/__init__.py", line 1164, in emit
+    self.flush()
+  File "/root/miniconda3/envs/vllm/lib/python3.12/logging/__init__.py", line 1144, in flush
+    self.stream.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Call stack:
+  File "/root/mol-llm/scripts/grpo_trl.py", line 462, in <module>
+    main(script_args, grpo_config, model_config)
+  File "/root/mol-llm/scripts/grpo_trl.py", line 454, in main
+    trainer.train(resume_from_checkpoint="ckpt/conversion/grpo/qwen3_vl_4b_i_grpo_lora_conversion_from_sft_lora/v1.1/20260822_180426/checkpoint-168")
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+    return inner_training_loop(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1515, in _inner_training_loop
+    self._evaluate(trial, ignore_keys_for_eval, skip_scheduler=True)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 3021, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2608, in evaluate
+    output = self.evaluation_loop(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2733, in evaluation_loop
+    losses, logits, labels = self.prediction_step(model, inputs, prediction_loss_only, ignore_keys=ignore_keys)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 3268, in prediction_step
+    inputs = self._prepare_inputs(inputs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/extras/profiling.py", line 211, in wrapper
+    return func(self, *args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1583, in _prepare_inputs
+    inputs = self._generate_and_score_completions(generation_batch)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2371, in _generate_and_score_completions
+    ) = self._generate(prompts)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2172, in _generate
+    completion_ids, logprobs = self._generate_single_turn(prompt_ids, images, multimodal_fields)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1798, in _generate_single_turn
+    _, completion_ids, logprobs, _ = self.vllm_generation.generate(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/generation/vllm_generation.py", line 545, in generate
+    self.llm.collective_rpc("reload_weights")
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 601, in collective_rpc
+    return self.llm_engine.collective_rpc(method, timeout, args, kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 426, in collective_rpc
+    return self.engine_core.collective_rpc(method, timeout, args, kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 363, in collective_rpc
+    return self.engine_core.collective_rpc(method, timeout, args, kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 853, in collective_rpc
+    return self.model_executor.collective_rpc(method, timeout, args, kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 92, in collective_rpc
+    result = run_method(self.driver_worker, method, args, kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/serial_utils.py", line 510, in run_method
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu_worker.py", line 427, in reload_weights
+    self.model_runner.reload_weights(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu/model_runner.py", line 378, in reload_weights
+    GPUModelRunnerV1.reload_weights(self, *args, **kwargs)  # type: ignore[arg-type]
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu_model_runner.py", line 5488, in reload_weights
+    loaded_weights = model.load_weights(weights_iterator)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/qwen3_vl.py", line 2907, in load_weights
+    return loader.load_weights(weights, mapper=self.hf_to_vllm_mapper)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/reload/torchao_decorator.py", line 50, in patched_model_load_weights
+    return original_load_weights(self, weights, *args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 421, in load_weights
+    autoloaded_weights = set(self._load_module("", self.module, weights))
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 346, in _load_module
+    for child_prefix, child_weights in self._groupby_prefix(weights):
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 223, in _groupby_prefix
+    for prefix, group in itertools.groupby(weights_by_parts, key=lambda x: x[0][0]):
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 220, in <genexpr>
+    for weight_name, weight_data in weights
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 418, in <genexpr>
+    (name, weight) for name, weight in weights if not self._can_skip(name)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 137, in apply
+    for name, data in weights:
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 333, in get_all_weights
+    yield from self._get_weights_iterator(primary_weights)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 249, in _get_weights_iterator
+    hf_folder, hf_weights_files, use_safetensors = self._prepare_weights(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 195, in _prepare_weights
+    hf_folder = download_weights_from_hf(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/weight_utils.py", line 512, in download_weights_from_hf
+    hf_folder = hf_api().snapshot_download(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/hf_api.py", line 6667, in snapshot_download
+    return snapshot_download(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/_snapshot_download.py", line 259, in snapshot_download
+    repo_info = api.repo_info(repo_id=repo_id, repo_type=repo_type, revision=revision)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/hf_api.py", line 3630, in repo_info
+    return method(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/hf_api.py", line 3309, in model_info
+    r = get_session().get(path, headers=headers, timeout=timeout, params=params)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/httpx/_client.py", line 1053, in get
+    return self.request(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/httpx/_client.py", line 1025, in _send_single_request
+    logger.info(
+Message: 'HTTP Request: %s %s "%s %d %s"'
+Arguments: ('GET', URL('https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main'), 'HTTP/1.1', 200, 'OK')
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+--- Logging error ---
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/vllm/lib/python3.12/logging/__init__.py", line 1164, in emit
+    self.flush()
+  File "/root/miniconda3/envs/vllm/lib/python3.12/logging/__init__.py", line 1144, in flush
+    self.stream.flush()
+BrokenPipeError: [Errno 32] Broken pipe
+Call stack:
+  File "/root/mol-llm/scripts/grpo_trl.py", line 462, in <module>
+    main(script_args, grpo_config, model_config)
+  File "/root/mol-llm/scripts/grpo_trl.py", line 454, in main
+    trainer.train(resume_from_checkpoint="ckpt/conversion/grpo/qwen3_vl_4b_i_grpo_lora_conversion_from_sft_lora/v1.1/20260822_180426/checkpoint-168")
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+    return inner_training_loop(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1515, in _inner_training_loop
+    self._evaluate(trial, ignore_keys_for_eval, skip_scheduler=True)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 3021, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2608, in evaluate
+    output = self.evaluation_loop(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2733, in evaluation_loop
+    losses, logits, labels = self.prediction_step(model, inputs, prediction_loss_only, ignore_keys=ignore_keys)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 3268, in prediction_step
+    inputs = self._prepare_inputs(inputs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/extras/profiling.py", line 211, in wrapper
+    return func(self, *args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1583, in _prepare_inputs
+    inputs = self._generate_and_score_completions(generation_batch)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2371, in _generate_and_score_completions
+    ) = self._generate(prompts)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2172, in _generate
+    completion_ids, logprobs = self._generate_single_turn(prompt_ids, images, multimodal_fields)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1798, in _generate_single_turn
+    _, completion_ids, logprobs, _ = self.vllm_generation.generate(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/generation/vllm_generation.py", line 545, in generate
+    self.llm.collective_rpc("reload_weights")
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 601, in collective_rpc
+    return self.llm_engine.collective_rpc(method, timeout, args, kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 426, in collective_rpc
+    return self.engine_core.collective_rpc(method, timeout, args, kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 363, in collective_rpc
+    return self.engine_core.collective_rpc(method, timeout, args, kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 853, in collective_rpc
+    return self.model_executor.collective_rpc(method, timeout, args, kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 92, in collective_rpc
+    result = run_method(self.driver_worker, method, args, kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/serial_utils.py", line 510, in run_method
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu_worker.py", line 427, in reload_weights
+    self.model_runner.reload_weights(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu/model_runner.py", line 378, in reload_weights
+    GPUModelRunnerV1.reload_weights(self, *args, **kwargs)  # type: ignore[arg-type]
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu_model_runner.py", line 5488, in reload_weights
+    loaded_weights = model.load_weights(weights_iterator)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/qwen3_vl.py", line 2907, in load_weights
+    return loader.load_weights(weights, mapper=self.hf_to_vllm_mapper)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/reload/torchao_decorator.py", line 50, in patched_model_load_weights
+    return original_load_weights(self, weights, *args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 421, in load_weights
+    autoloaded_weights = set(self._load_module("", self.module, weights))
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 346, in _load_module
+    for child_prefix, child_weights in self._groupby_prefix(weights):
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 223, in _groupby_prefix
+    for prefix, group in itertools.groupby(weights_by_parts, key=lambda x: x[0][0]):
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 220, in <genexpr>
+    for weight_name, weight_data in weights
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 418, in <genexpr>
+    (name, weight) for name, weight in weights if not self._can_skip(name)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 137, in apply
+    for name, data in weights:
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 333, in get_all_weights
+    yield from self._get_weights_iterator(primary_weights)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 249, in _get_weights_iterator
+    hf_folder, hf_weights_files, use_safetensors = self._prepare_weights(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 224, in _prepare_weights
+    download_safetensors_index_file_from_hf(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/weight_utils.py", line 561, in download_safetensors_index_file_from_hf
+    hf_api().hf_hub_download(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/hf_api.py", line 6505, in hf_hub_download
+    return hf_hub_download(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1013, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1088, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = _get_metadata_or_catch_error(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1707, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1615, in get_hf_file_metadata
+    response = _httpx_follow_relative_redirects_with_backoff(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 719, in _httpx_follow_relative_redirects_with_backoff
+    response = http_backoff(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 596, in http_backoff
+    return next(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 504, in _http_backoff_base
+    response = client.request(method=method, url=url, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/httpx/_client.py", line 1025, in _send_single_request
+    logger.info(
+Message: 'HTTP Request: %s %s "%s %d %s"'
+Arguments: ('HEAD', URL('https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json'), 'HTTP/1.1', 404, 'Not Found')
+Traceback (most recent call last):
+  File "/root/mol-llm/scripts/grpo_trl.py", line 462, in <module>
+    main(script_args, grpo_config, model_config)
+  File "/root/mol-llm/scripts/grpo_trl.py", line 454, in main
+    trainer.train(resume_from_checkpoint="ckpt/conversion/grpo/qwen3_vl_4b_i_grpo_lora_conversion_from_sft_lora/v1.1/20260822_180426/checkpoint-168")
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1515, in _inner_training_loop
+    self._evaluate(trial, ignore_keys_for_eval, skip_scheduler=True)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 3021, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2608, in evaluate
+    output = self.evaluation_loop(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2733, in evaluation_loop
+    losses, logits, labels = self.prediction_step(model, inputs, prediction_loss_only, ignore_keys=ignore_keys)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 3268, in prediction_step
+    inputs = self._prepare_inputs(inputs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/extras/profiling.py", line 211, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1583, in _prepare_inputs
+    inputs = self._generate_and_score_completions(generation_batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2371, in _generate_and_score_completions
+    ) = self._generate(prompts)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2172, in _generate
+    completion_ids, logprobs = self._generate_single_turn(prompt_ids, images, multimodal_fields)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1798, in _generate_single_turn
+    _, completion_ids, logprobs, _ = self.vllm_generation.generate(
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/generation/vllm_generation.py", line 545, in generate
+    self.llm.collective_rpc("reload_weights")
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 601, in collective_rpc
+    return self.llm_engine.collective_rpc(method, timeout, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 426, in collective_rpc
+    return self.engine_core.collective_rpc(method, timeout, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 363, in collective_rpc
+    return self.engine_core.collective_rpc(method, timeout, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 853, in collective_rpc
+    return self.model_executor.collective_rpc(method, timeout, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 92, in collective_rpc
+    result = run_method(self.driver_worker, method, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/serial_utils.py", line 510, in run_method
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu_worker.py", line 427, in reload_weights
+    self.model_runner.reload_weights(*args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu/model_runner.py", line 378, in reload_weights
+    GPUModelRunnerV1.reload_weights(self, *args, **kwargs)  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu_model_runner.py", line 5488, in reload_weights
+    loaded_weights = model.load_weights(weights_iterator)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/qwen3_vl.py", line 2907, in load_weights
+    return loader.load_weights(weights, mapper=self.hf_to_vllm_mapper)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/reload/torchao_decorator.py", line 50, in patched_model_load_weights
+    return original_load_weights(self, weights, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 421, in load_weights
+    autoloaded_weights = set(self._load_module("", self.module, weights))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 346, in _load_module
+    for child_prefix, child_weights in self._groupby_prefix(weights):
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 223, in _groupby_prefix
+    for prefix, group in itertools.groupby(weights_by_parts, key=lambda x: x[0][0]):
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 220, in <genexpr>
+    for weight_name, weight_data in weights
+                                    ^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 418, in <genexpr>
+    (name, weight) for name, weight in weights if not self._can_skip(name)
+                                       ^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 137, in apply
+    for name, data in weights:
+                      ^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 333, in get_all_weights
+    yield from self._get_weights_iterator(primary_weights)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 319, in <genexpr>
+    return ((source.prefix + name, tensor) for (name, tensor) in weights_iterator)
+                                                                 ^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/weight_utils.py", line 906, in safetensors_weights_iterator
+    for st_file in tqdm(
+                   ^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/tqdm/asyncio.py", line 24, in __init__
+    super().__init__(iterable, *args, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/tqdm/std.py", line 1101, in __init__
+    self.sp = self.status_printer(self.fp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/tqdm/std.py", line 447, in status_printer
+    getattr(sys.stdout, 'flush', lambda: None)()
+BrokenPipeError: [Errno 32] Broken pipe
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/mol-llm/scripts/grpo_trl.py", line 462, in <module>
+[rank0]:     main(script_args, grpo_config, model_config)
+[rank0]:   File "/root/mol-llm/scripts/grpo_trl.py", line 454, in main
+[rank0]:     trainer.train(resume_from_checkpoint="ckpt/conversion/grpo/qwen3_vl_4b_i_grpo_lora_conversion_from_sft_lora/v1.1/20260822_180426/checkpoint-168")
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1515, in _inner_training_loop
+[rank0]:     self._evaluate(trial, ignore_keys_for_eval, skip_scheduler=True)
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 3021, in _evaluate
+[rank0]:     metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2608, in evaluate
+[rank0]:     output = self.evaluation_loop(
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2733, in evaluation_loop
+[rank0]:     losses, logits, labels = self.prediction_step(model, inputs, prediction_loss_only, ignore_keys=ignore_keys)
+[rank0]:                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 3268, in prediction_step
+[rank0]:     inputs = self._prepare_inputs(inputs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/extras/profiling.py", line 211, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1583, in _prepare_inputs
+[rank0]:     inputs = self._generate_and_score_completions(generation_batch)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2371, in _generate_and_score_completions
+[rank0]:     ) = self._generate(prompts)
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2172, in _generate
+[rank0]:     completion_ids, logprobs = self._generate_single_turn(prompt_ids, images, multimodal_fields)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1798, in _generate_single_turn
+[rank0]:     _, completion_ids, logprobs, _ = self.vllm_generation.generate(
+[rank0]:                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/generation/vllm_generation.py", line 545, in generate
+[rank0]:     self.llm.collective_rpc("reload_weights")
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/entrypoints/llm.py", line 601, in collective_rpc
+[rank0]:     return self.llm_engine.collective_rpc(method, timeout, args, kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/llm_engine.py", line 426, in collective_rpc
+[rank0]:     return self.engine_core.collective_rpc(method, timeout, args, kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 363, in collective_rpc
+[rank0]:     return self.engine_core.collective_rpc(method, timeout, args, kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 853, in collective_rpc
+[rank0]:     return self.model_executor.collective_rpc(method, timeout, args, kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 92, in collective_rpc
+[rank0]:     result = run_method(self.driver_worker, method, args, kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/serial_utils.py", line 510, in run_method
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu_worker.py", line 427, in reload_weights
+[rank0]:     self.model_runner.reload_weights(*args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu/model_runner.py", line 378, in reload_weights
+[rank0]:     GPUModelRunnerV1.reload_weights(self, *args, **kwargs)  # type: ignore[arg-type]
+[rank0]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/v1/worker/gpu_model_runner.py", line 5488, in reload_weights
+[rank0]:     loaded_weights = model.load_weights(weights_iterator)
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/qwen3_vl.py", line 2907, in load_weights
+[rank0]:     return loader.load_weights(weights, mapper=self.hf_to_vllm_mapper)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/reload/torchao_decorator.py", line 50, in patched_model_load_weights
+[rank0]:     return original_load_weights(self, weights, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 421, in load_weights
+[rank0]:     autoloaded_weights = set(self._load_module("", self.module, weights))
+[rank0]:                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 346, in _load_module
+[rank0]:     for child_prefix, child_weights in self._groupby_prefix(weights):
+[rank0]:                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 223, in _groupby_prefix
+[rank0]:     for prefix, group in itertools.groupby(weights_by_parts, key=lambda x: x[0][0]):
+[rank0]:                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 220, in <genexpr>
+[rank0]:     for weight_name, weight_data in weights
+[rank0]:                                     ^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 418, in <genexpr>
+[rank0]:     (name, weight) for name, weight in weights if not self._can_skip(name)
+[rank0]:                                        ^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 137, in apply
+[rank0]:     for name, data in weights:
+[rank0]:                       ^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 333, in get_all_weights
+[rank0]:     yield from self._get_weights_iterator(primary_weights)
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 319, in <genexpr>
+[rank0]:     return ((source.prefix + name, tensor) for (name, tensor) in weights_iterator)
+[rank0]:                                                                  ^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/vllm/model_executor/model_loader/weight_utils.py", line 906, in safetensors_weights_iterator
+[rank0]:     for st_file in tqdm(
+[rank0]:                    ^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/tqdm/asyncio.py", line 24, in __init__
+[rank0]:     super().__init__(iterable, *args, **kwargs)
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/tqdm/std.py", line 1101, in __init__
+[rank0]:     self.sp = self.status_printer(self.fp)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/tqdm/std.py", line 447, in status_printer
+[rank0]:     getattr(sys.stdout, 'flush', lambda: None)()
+[rank0]: BrokenPipeError: [Errno 32] Broken pipe

@@ -1,0 +1,99 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai
+  0%|                                                                                                                                                                      | 0/34970 [00:00<?, ?it/s]Error computing metrics for completion 0: 'list' object has no attribute 'strip'
+Error computing metrics for completion 1: 'list' object has no attribute 'strip'
+Error computing metrics for completion 2: 'list' object has no attribute 'strip'
+Error computing metrics for completion 3: 'list' object has no attribute 'strip'
+Error computing metrics for completion 4: 'list' object has no attribute 'strip'
+Error computing metrics for completion 5: 'list' object has no attribute 'strip'
+Error computing metrics for completion 6: 'list' object has no attribute 'strip'
+Error computing metrics for completion 7: 'list' object has no attribute 'strip'
+Error computing metrics for completion 8: 'list' object has no attribute 'strip'
+Error computing metrics for completion 9: 'list' object has no attribute 'strip'
+Error computing metrics for completion 10: 'list' object has no attribute 'strip'
+Error computing metrics for completion 11: 'list' object has no attribute 'strip'
+Error computing metrics for completion 12: 'list' object has no attribute 'strip'
+Error computing metrics for completion 13: 'list' object has no attribute 'strip'
+Error computing metrics for completion 14: 'list' object has no attribute 'strip'
+Error computing metrics for completion 15: 'list' object has no attribute 'strip'
+[RANK 0] All reward functions returned None for the following kwargs:
+{'can_smiles': 'COc1cc(C[C@H](COC(C)=O)[C@H](C)Cc2cc(OC)c(O)c(OC)c2)ccc1O', 'inchi': 'InChI=1S/C23H30O7/c1-14(8-17-11-21(28-4)23(26)22(12-17)29-5)18(13-30-15(2)24)9-16-6-7-19(25)20(10-16)27-3/h6-7,10-12,14,18,25-26H,8-9,13H2,1-5H3/t14-,18-/m1/s1', 'inchikey': 'TZDZTWKCXMIGJR-RDTXWAMCSA-N', 'iupac': '[(2S,3R)-4-(4-hydroxy-3,5-dimethoxyphenyl)-2-[(4-hydroxy-3-methoxyphenyl)methyl]-3-methylbutyl] acetate', 'task_id': 'can_reps_translation:inchi->can_smiles', 'task_type': 'can_reps_translation', 'input_rep_type': 'inchi', 'input_rep': 'InChI=1S/C23H30O7/c1-14(8-17-11-21(28-4)23(26)22(12-17)29-5)18(13-30-15(2)24)9-16-6-7-19(25)20(10-16)27-3/h6-7,10-12,14,18,25-26H,8-9,13H2,1-5H3/t14-,18-/m1/s1', 'output_rep_type': 'can_smiles', 'output_rep': 'COc1cc(C[C@H](COC(C)=O)[C@H](C)Cc2cc(OC)c(O)c(OC)c2)ccc1O', 'qa_template': 'What is the {output_rep_type} of this molecule? {input_rep}', 'prompt': [{'role': 'user', 'content': 'What is the SMILES of this molecule? InChI=1S/C23H30O7/c1-14(8-17-11-21(28-4)23(26)22(12-17)29-5)18(13-30-15(2)24)9-16-6-7-19(25)20(10-16)27-3/h6-7,10-12,14,18,25-26H,8-9,13H2,1-5H3/t14-,18-/m1/s1 Please output the SMILES representation only. Do not output anything else.'}], 'completion': [{'role': 'assistant', 'content': 'COc1cc(C[C@H](COC(C)=O)[C@H](C)Cc2cc(OC)c(O)c(OC)c2)ccc1O'}]}
+Please ensure that at least one reward function returns a valid reward.
+  0%|                                                                                                                                                           | 1/34970 [00:09<95:29:19,  9.83s/it]Error computing metrics for completion 0: 'list' object has no attribute 'strip'
+Error computing metrics for completion 1: 'list' object has no attribute 'strip'
+Error computing metrics for completion 2: 'list' object has no attribute 'strip'
+Error computing metrics for completion 3: 'list' object has no attribute 'strip'
+Error computing metrics for completion 4: 'list' object has no attribute 'strip'
+Error computing metrics for completion 5: 'list' object has no attribute 'strip'
+Error computing metrics for completion 6: 'list' object has no attribute 'strip'
+Error computing metrics for completion 7: 'list' object has no attribute 'strip'
+Error computing metrics for completion 8: 'list' object has no attribute 'strip'
+Error computing metrics for completion 9: 'list' object has no attribute 'strip'
+Error computing metrics for completion 10: 'list' object has no attribute 'strip'
+Error computing metrics for completion 11: 'list' object has no attribute 'strip'
+Error computing metrics for completion 12: 'list' object has no attribute 'strip'
+Error computing metrics for completion 13: 'list' object has no attribute 'strip'
+Error computing metrics for completion 14: 'list' object has no attribute 'strip'
+Error computing metrics for completion 15: 'list' object has no attribute 'strip'
+[RANK 0] All reward functions returned None for the following kwargs:
+{'can_smiles': 'Cc1cn([C@H]2C[C@H](O)[C@@H](COP(=O)([O-])OP(=O)(O)O[C@H]3O[C@@H](C)[C@H](O)[C@@H](O)[C@H]3O)O2)c(=O)nc1[O-]', 'inchi': 'InChI=1S/C16H26N2O15P2/c1-6-4-18(16(24)17-14(6)23)10-3-8(19)9(31-10)5-29-34(25,26)33-35(27,28)32-15-13(22)12(21)11(20)7(2)30-15/h4,7-13,15,19-22H,3,5H2,1-2H3,(H,25,26)(H,27,28)(H,17,23,24)/p-2/t7-,8-,9+,10+,11-,12+,13+,15+/m0/s1', 'inchikey': 'ZOSQFDVXNQFKBY-CGAXJHMRSA-L', 'iupac': None, 'task_id': 'cross_rep_normalization:random_deepsmiles->inchi', 'task_type': 'cross_rep_normalization', 'input_rep_type': 'random_deepsmiles', 'input_rep': 'POPO)=O)O[C@@H][C@@H][C@@H][C@@H]O)[C@H]C)O6)))O))O))))))OC[C@@H][C@H]C[C@@H]O5)nccC)cnc6=O)))[O-])))))))O)))))[O-])=O', 'output_rep_type': 'inchi', 'output_rep': 'InChI=1S/C16H26N2O15P2/c1-6-4-18(16(24)17-14(6)23)10-3-8(19)9(31-10)5-29-34(25,26)33-35(27,28)32-15-13(22)12(21)11(20)7(2)30-15/h4,7-13,15,19-22H,3,5H2,1-2H3,(H,25,26)(H,27,28)(H,17,23,24)/p-2/t7-,8-,9+,10+,11-,12+,13+,15+/m0/s1', 'qa_template': 'Take {input_rep} (a noisy {input_rep_type}) and express it as proper {output_rep_type}.', 'prompt': [{'role': 'user', 'content': 'Take POPO)=O)O[C@@H][C@@H][C@@H][C@@H]O)[C@H]C)O6)))O))O))))))OC[C@@H][C@H]C[C@@H]O5)nccC)cnc6=O)))[O-])))))))O)))))[O-])=O (a noisy DeepSMILES) and express it as proper InChI. Give me only the InChI, no additional text.'}], 'completion': [{'role': 'assistant', 'content': 'InChI=1S/C16H26N2O15P2/c1-6-4-18(16(24)17-14(6)23)10-3-8(19)9(31-10)5-29-34(25,26)33-35(27,28)32-15-13(22)12(21)11(20)7(2)30-15/h4,7-13,15,19-22H,3,5H2,1-2H3,(H,25,26)(H,27,28)(H,17,23,24)/p-2/t7-,8-,9+,10+,11-,12+,13+,15+/m0/s1'}]}
+Please ensure that at least one reward function returns a valid reward.
+Exception ignored in: <function WeakSet.__init__.<locals>._remove at 0x7f444fe90680>
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/vllm/lib/python3.12/_weakrefset.py", line 39, in _remove
+    def _remove(item, selfref=ref(self)):
+
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "/root/mol-llm/scripts/grpo_trl.py", line 399, in <module>
+    main(script_args, grpo_config, model_config)
+  File "/root/mol-llm/scripts/grpo_trl.py", line 391, in main
+    trainer.train()
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1519, in _inner_training_loop
+    self._run_epoch(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1747, in _run_epoch
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1545, in training_step
+    output = super().training_step(model, inputs, num_items_in_batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1909, in training_step
+    model.train()
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2905, in train
+    module.train(mode)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2905, in train
+    module.train(mode)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/modeling_utils.py", line 5019, in train
+    out = super().train(mode)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2905, in train
+    module.train(mode)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/modeling_utils.py", line 5019, in train
+    out = super().train(mode)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2905, in train
+    module.train(mode)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/modeling_utils.py", line 5019, in train
+    out = super().train(mode)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2905, in train
+    module.train(mode)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2905, in train
+    module.train(mode)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2905, in train
+    module.train(mode)
+  [Previous line repeated 2 more times]
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2904, in train
+    for module in self.children():
+                  ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2783, in children
+    for _name, module in self.named_children():
+                         ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2786, in named_children
+    def named_children(self) -> Iterator[tuple[str, "Module"]]:
+
+KeyboardInterrupt

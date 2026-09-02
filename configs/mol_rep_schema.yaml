@@ -1,0 +1,114 @@
+# Molecule representation schema configuration file.
+# Use `code_name` as the stable internal identifier for training/inference.
+# Use `display_name` for human-facing UI and visualization.
+# Use `aliases` for legacy or alternative spellings.
+# `kind` describes the data type; `family` describes the representation family.
+
+representations:
+  can_smiles:
+    code_name: can_smiles
+    display_name: SMILES
+    aliases: [can_smiles, canonical_smiles]
+    kind: text
+    family: linear_string
+    derived_from: []
+    description: RDKit-generated canonical SMILES; this is the canonical anchor used to derive other canonical representations
+
+  can_selfies:
+    code_name: can_selfies
+    display_name: SELFIES
+    aliases: [can_selfies, canonical_selfies]
+    kind: text
+    family: linear_string
+    derived_from: [can_smiles, selfies]
+    description: RDKit-defined canonical SELFIES derived from can_smiles
+
+  can_deepsmiles:
+    code_name: can_deepsmiles
+    display_name: DeepSMILES
+    aliases: [can_deepsmiles, canonical_deepsmiles]
+    kind: text
+    family: linear_string
+    derived_from: [can_smiles, deepsmiles]
+    description: RDKit-defined canonical DeepSMILES derived from can_smiles
+
+  random_smiles:
+    code_name: random_smiles
+    display_name: SMILES
+    aliases: [random_smiles, rand_smiles]
+    kind: text
+    family: linear_string
+    derived_from: [can_smiles, rdkit]
+    description: A randomized SMILES variant used as the source for generating other randomized forms
+
+  random_selfies:
+    code_name: random_selfies
+    display_name: SELFIES
+    aliases: [random_selfies, rand_selfies]
+    kind: text
+    family: linear_string
+    derived_from: [random_smiles, rdkit]
+    description: Randomized SELFIES generated from random_smiles
+
+  random_deepsmiles:
+    code_name: random_deepsmiles
+    display_name: DeepSMILES
+    aliases: [random_deepsmiles, rand_deepsmiles]
+    kind: text
+    family: linear_string
+    derived_from: [random_smiles, rdkit]
+    description: Randomized DeepSMILES generated from random_smiles
+
+  inchi:
+    code_name: inchi
+    display_name: InChI
+    aliases: [inchi]
+    kind: text
+    family: identifier
+    derived_from: [can_smiles, rdkit]
+    description: International Chemical Identifier
+
+  inchikey:
+    code_name: inchikey
+    display_name: InChIKey
+    aliases: [inchikey, inchi_key]
+    kind: text
+    family: identifier
+    derived_from: [inchi, rdkit]
+    description: Standard InChIKey hash derived from the molecular structure
+
+  iupac:
+    code_name: iupac
+    display_name: IUPAC name
+    aliases: [iupac, name_iupac]
+    kind: text
+    family: name
+    derived_from: [can_smiles, pubchempy]
+    description: Systematic chemical name from pubchempy
+
+  cml:
+    code_name: cml
+    display_name: CML
+    aliases: [cml, chemistry_markup_language]
+    kind: text
+    family: xml_like
+    derived_from: [can_smiles, rdkit]
+    description: Chemical Markup Language representation derived from the canonical structure
+
+  moljson:
+    code_name: moljson
+    display_name: MolJSON
+    aliases: [moljson, json_mol]
+    kind: text
+    family: json_like
+    derived_from: [can_smiles]
+    description: A structured molecular representation modeled after JSON-style syntax
+
+  mol_image:
+    code_name: mol_image
+    display_name: Molecule image
+    aliases: [mol_image, molecule_image]
+    kind: image
+    family: rdkit_rendering
+    derived_from: [can_smiles, rdkit]
+    description: Default molecular image rendered by RDKit

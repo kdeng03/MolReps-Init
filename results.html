@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Molecule Representation Learning Results</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --panel: #ffffff;
+        --primary: #2f5ef7;
+        --primary-soft: #edf2ff;
+        --success: #1b9c7a;
+        --success-soft: #eafaf5;
+        --warning: #f0ad4e;
+        --warning-soft: #fff7e8;
+        --danger: #d9534f;
+        --danger-soft: #fff0f0;
+        --text: #1f2a37;
+        --muted: #667085;
+        --border: #e7ecf3;
+        --shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 32px auto;
+        padding: 0 20px 60px;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #1f3bb3, #4d79ff 60%, #83a9ff);
+        color: white;
+        border-radius: 18px;
+        padding: 28px 30px;
+        box-shadow: var(--shadow);
+      }
+
+      .hero h1 {
+        margin: 0 0 12px;
+        font-size: clamp(1.9rem, 2.6rem, 3rem);
+      }
+
+      .hero p {
+        margin: 0;
+        max-width: 980px;
+        font-size: 1.02rem;
+        color: rgba(255,255,255,0.9);
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .tag {
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.82rem;
+        letter-spacing: 0.02em;
+      }
+
+      .section {
+        margin-top: 28px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        padding: 24px 24px 18px;
+      }
+
+      .section h2 { margin: 0 0 16px; font-size: 1.55rem; }
+      .section h3 { margin: 0 0 10px; font-size: 1.2rem; }
+      .section h4 { margin: 14px 0 8px; font-size: 1.05rem; }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 18px;
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 18px 18px 14px;
+        background: #fff;
+      }
+
+      .card .label {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .card .value {
+        font-size: clamp(1.7rem, 3vw, 2.3rem);
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      .card.primary { background: var(--primary-soft); border-color: #dfe6ff; }
+      .card.success { background: var(--success-soft); border-color: #d9f5ee; }
+      .card.warning { background: var(--warning-soft); border-color: #fce7bf; }
+      .card.danger { background: var(--danger-soft); border-color: #f9d3d1; }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 12px;
+      }
+
+      th, td {
+        padding: 12px 10px;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+        font-size: 0.96rem;
+      }
+
+      th {
+        background: #f8faff;
+        color: var(--text);
+        font-weight: 700;
+      }
+
+      tbody tr:hover { background: #fafcff; }
+
+      .annot {
+        background: #f8fafc;
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--primary);
+        border-radius: 10px;
+        padding: 12px 14px;
+        margin-top: 16px;
+        color: #334155;
+      }
+
+      .kicker {
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.35fr 0.9fr;
+        gap: 18px;
+      }
+
+      @media (max-width: 850px) {
+        .two-col { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <div class="kicker">Experiment summary</div>
+        <h1>Molecule Representation Learning</h1>
+        <p>
+          This page organizes the results around a clean narrative: first we characterize the base model on the designed benchmark,
+          then we evaluate the strongest SFT model, followed by the stage-1 ablation and stage-2 post-training analysis. The goal is to keep the main text concise while separating the explanatory analysis from the core finding.
+        </p>
+        <div class="tag-row">
+          <div class="tag">Base capability</div>
+          <div class="tag">Best SFT</div>
+          <div class="tag">Stage 1 ablation</div>
+          <div class="tag">Stage 2 post-train</div>
+          <div class="tag">MolRepBench placeholder</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="kicker">Main results</div>
+        <h2>1. Base vs strongest SFT on the designed testset</h2>
+        <p>
+          The main result should be presented as a compact comparison between the base model and the strongest SFT checkpoint on the same benchmark.
+          This keeps the narrative focused on the two central questions: what the model can do without training, and what the best learned model truly gains.
+        </p>
+
+        <div class="summary-grid">
+          <div class="card primary">
+            <div class="label">LLM base</div>
+            <div class="value">TBD</div>
+            <div class="label">Exact Match</div>
+          </div>
+          <div class="card success">
+            <div class="label">LLM SFT</div>
+            <div class="value">TBD</div>
+            <div class="label">Exact Match</div>
+          </div>
+          <div class="card warning">
+            <div class="label">VLM base</div>
+            <div class="value">TBD</div>
+            <div class="label">Exact Match</div>
+          </div>
+          <div class="card danger">
+            <div class="label">VLM SFT (best)</div>
+            <div class="value">TBD</div>
+            <div class="label">Exact Match</div>
+          </div>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Dataset</th>
+              <th>Valid Ratio</th>
+              <th>Exact Match</th>
+              <th>InChI Match</th>
+              <th>Tanimoto</th>
+              <th>Interpretation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>qwen3_4b_i (base)</td>
+              <td>Base testset</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>Reference baseline</td>
+            </tr>
+            <tr>
+              <td>qwen3_4b_i_sft_lora_conversion</td>
+              <td>Base testset</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>Strong in-domain gains</td>
+            </tr>
+            <tr>
+              <td>qwen3_vl_4b_i (base)</td>
+              <td>Base testset</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>Weak visual-only baseline</td>
+            </tr>
+            <tr>
+              <td>qwen3_vl_4b_i_sft_lora_ocr_conversion</td>
+              <td>Base testset</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>Strongest VLM checkpoint</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="annot">
+          <strong>Writing note:</strong> This is the core table for the main results section. It should stay compact and only compare the base model and the strongest learned model on the same benchmark.
+        </div>
+
+        <div class="section" style="margin-top: 18px; padding: 18px; background: #f9fbff; border-color: #dfe9ff;">
+          <div class="kicker">1.1</div>
+          <h3>Task-level and representation-level breakdown</h3>
+          <p>
+            The breakdown should be used only to explain where the gain appears, not to re-introduce the entire experiment list.
+            InChI match is the preferred primary metric for this analysis because it reflects structure-level correctness beyond exact string identity.
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Base</th>
+                <th>Best SFT</th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Translation</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Which conversion is easiest to learn</td>
+              </tr>
+              <tr>
+                <td>Understanding</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Where semantic grounding helps most</td>
+              </tr>
+              <tr>
+                <td>Normalization</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Canonicalization robustness</td>
+              </tr>
+              <tr>
+                <td>SMILES / SELFIES / DeepSMILES / InChI / IUPAC / CML</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Representation difficulty and learning efficiency</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="kicker">Stage 1 analysis</div>
+        <h2>2. Training setup comparison</h2>
+        <p>
+          This section is meant to explain why the gains happen and which setup is most effective. It is not the main result section,
+          so it should be lighter than Section 1 and should focus on the key training comparisons rather than listing all experimental variants.
+        </p>
+
+        <div class="section" style="margin-top: 18px; padding: 18px; background: #f9fbff; border-color: #dde8ff;">
+          <div class="kicker">2.1</div>
+          <h3>LLM setup comparison</h3>
+          <p>Compare the different LLM configurations during stage 1, focusing on task mixtures and training effectiveness.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Setup</th>
+                <th>Purpose</th>
+                <th>Valid Ratio</th>
+                <th>Exact Match</th>
+                <th>InChI Match</th>
+                <th>Takeaway</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Translation-only</td>
+                <td>String-level conversion</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Whether simple conversion is sufficient</td>
+              </tr>
+              <tr>
+                <td>Understanding-only</td>
+                <td>Semantic grounding</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Whether semantic tasks matter</td>
+              </tr>
+              <tr>
+                <td>Normalization-only</td>
+                <td>Canonicalization</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Whether normalization helps representation alignment</td>
+              </tr>
+              <tr>
+                <td>Mixed tasks</td>
+                <td>Multi-task learning</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Whether task complementarity matters</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section" style="margin-top: 18px; padding: 18px; background: #fffdf7; border-color: #f7e5bf;">
+          <div class="kicker">2.2</div>
+          <h3>VLM cross-validation</h3>
+          <p>
+            This section should explicitly test whether the OCR branch helps the conversion branch, and vice versa. The key comparison is not just between models,
+            but between the same task under different training histories.
+          </p>
+
+          <h4>OCR branch</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Dataset</th>
+                <th>Valid Ratio</th>
+                <th>Exact Match</th>
+                <th>InChI Match</th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>qwen3_vl_4b_i (base)</td>
+                <td>OCR testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Visual-only baseline</td>
+              </tr>
+              <tr>
+                <td>qwen3_vl_4b_i_sft_lora_ocr</td>
+                <td>OCR testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>OCR-only training effect</td>
+              </tr>
+              <tr>
+                <td>qwen3_vl_4b_i_sft_lora_conversion</td>
+                <td>OCR testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Cross-task transfer check</td>
+              </tr>
+              <tr>
+                <td>qwen3_vl_4b_i_sft_lora_ocr_conversion</td>
+                <td>OCR testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Best OCR performance</td>
+              </tr>
+              <tr>
+                <td>same models</td>
+                <td>OCR extra testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>OOD robustness</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>Conversion branch</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Dataset</th>
+                <th>Valid Ratio</th>
+                <th>Exact Match</th>
+                <th>InChI Match</th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>qwen3_vl_4b_i (base)</td>
+                <td>Conversion testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Text conversion baseline</td>
+              </tr>
+              <tr>
+                <td>qwen3_vl_4b_i_sft_lora_conversion</td>
+                <td>Conversion testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Conversion-only SFT</td>
+              </tr>
+              <tr>
+                <td>qwen3_vl_4b_i_sft_lora_ocr</td>
+                <td>Conversion testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Cross-task effect check</td>
+              </tr>
+              <tr>
+                <td>qwen3_vl_4b_i_sft_lora_ocr_conversion</td>
+                <td>Conversion testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Positive transfer from OCR</td>
+              </tr>
+              <tr>
+                <td>same models</td>
+                <td>Conversion extra testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>OOD robustness</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section" style="margin-top: 18px; padding: 18px; background: #f8fbff; border-color: #dfe9ff;">
+          <div class="kicker">2.3</div>
+          <h3>Pure text comparison: LLM vs VLM</h3>
+          <p>
+            This sub-section is only a compact comparison of the learned text conversion ability under the same task and same benchmark.
+            It should not be a full duplicate of the base capability analysis.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Dataset</th>
+                <th>Model</th>
+                <th>Valid Ratio</th>
+                <th>Exact Match</th>
+                <th>InChI Match</th>
+                <th>Takeaway</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Text conversion testset</td>
+                <td>qwen3_4b_i (base)</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Text-only baseline</td>
+              </tr>
+              <tr>
+                <td>Text conversion testset</td>
+                <td>qwen3_4b_i_sft_lora_conversion</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Best text learning</td>
+              </tr>
+              <tr>
+                <td>Text conversion testset</td>
+                <td>qwen3_vl_4b_i_sft_lora_conversion</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>VLM text conversion</td>
+              </tr>
+              <tr>
+                <td>Text conversion extra testset</td>
+                <td>Same models</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Relative OOD robustness</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="kicker">Stage 2 analysis</div>
+        <h2>3. Post-training and rollout analysis</h2>
+        <p>
+          This section should stay separate from the main result and stage-1 ablation. It is exploratory and should be framed as a check on whether the SFT checkpoint can be further improved through sampling or hard-case targeted training.
+        </p>
+
+        <div class="section" style="margin-top: 18px; padding: 18px; background: #f8fbff; border-color: #dfe9ff;">
+          <div class="kicker">3.1</div>
+          <h3>Rollout analysis on the strongest SFT model</h3>
+          <p>
+            Use the selected best-performing VLM SFT checkpoint, and report pass@1 / pass@4 / pass@8 / pass@16 on the main testset.
+            This is a sampling robustness analysis rather than a main benchmark comparison.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Dataset</th>
+                <th>Pass@1</th>
+                <th>Pass@4</th>
+                <th>Pass@8</th>
+                <th>Pass@16</th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>qwen3_vl_4b_i_sft_lora_ocr_conversion</td>
+                <td>Base testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Sampling robustness check</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section" style="margin-top: 18px; padding: 18px; background: #fffaf7; border-color: #f5d2c8;">
+          <div class="kicker">3.2</div>
+          <h3>Hard-case selection from trainset rollout and post-training</h3>
+          <p>
+            The trainset rollout is used only to identify difficult samples; the final evaluation should still use the same testset and extra testset used in the main results.
+            This keeps the analysis rigorous and avoids conflating the hard-case subset with the benchmark itself.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Eval set</th>
+                <th>Valid Ratio</th>
+                <th>Exact Match</th>
+                <th>InChI Match</th>
+                <th>Takeaway</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Base SFT model</td>
+                <td>Base testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Reference</td>
+              </tr>
+              <tr>
+                <td>Hard-case SFT</td>
+                <td>Base testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Targeted improvement</td>
+              </tr>
+              <tr>
+                <td>Hard-case GRPO</td>
+                <td>Base testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>Reward-based improvement</td>
+              </tr>
+              <tr>
+                <td>Base SFT model</td>
+                <td>Extra testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>OOD reference</td>
+              </tr>
+              <tr>
+                <td>Hard-case SFT</td>
+                <td>Extra testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>OOD transfer</td>
+              </tr>
+              <tr>
+                <td>Hard-case GRPO</td>
+                <td>Extra testset</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>OOD reward optimization</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="kicker">Section 4</div>
+        <h2>MolRepBench transfer benchmark</h2>
+        <p>
+          This section remains intentionally placeholder-like for now. It will be filled in once the external benchmark is evaluated.
+        </p>
+        <div class="annot">
+          The purpose of this section is to provide an external validation signal: whether the in-house benchmark aligns with another benchmark and whether the best learned model transfers to a different distribution.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="kicker">Suggested paper flow</div>
+        <h2>Recommended organization</h2>
+        <ol>
+          <li><strong>Main results:</strong> base vs strongest SFT on the designed benchmark.</li>
+          <li><strong>Stage 1 analysis:</strong> LLM and VLM training setup comparisons.</li>
+          <li><strong>Stage 2 post-training:</strong> rollout and hard-case SFT/GRPO analysis.</li>
+          <li><strong>Transfer benchmark:</strong> MolRepBench, deferred until ready.</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
+
+    </div>
+  </body>
+</html>

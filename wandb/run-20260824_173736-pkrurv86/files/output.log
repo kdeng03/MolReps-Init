@@ -1,0 +1,28 @@
+  2%|███                                                                                                                             | 5/210 [01:30<49:43, 14.55s/it]Traceback (most recent call last):
+{'loss': '0.008982', 'grad_norm': '0.5947', 'learning_rate': '0', 'entropy': '0.009012', 'num_tokens': '3.054e+04', 'mean_token_accuracy': '0.9976', 'epoch': '0.04762'}
+{'loss': '0.001584', 'grad_norm': '0.05104', 'learning_rate': '1.429e-05', 'entropy': '0.004017', 'num_tokens': '4.118e+04', 'mean_token_accuracy': '0.9994', 'epoch': '0.09524'}
+{'loss': '0.0057', 'grad_norm': '0.1438', 'learning_rate': '2.857e-05', 'entropy': '0.005952', 'num_tokens': '6.375e+04', 'mean_token_accuracy': '0.9982', 'epoch': '0.1429'}
+{'loss': '0.001674', 'grad_norm': '0.05432', 'learning_rate': '4.286e-05', 'entropy': '0.003861', 'num_tokens': '7.484e+04', 'mean_token_accuracy': '0.9995', 'epoch': '0.1905'}
+{'loss': '0.001386', 'grad_norm': '0.05361', 'learning_rate': '5.714e-05', 'entropy': '0.003267', 'num_tokens': '8.778e+04', 'mean_token_accuracy': '0.9998', 'epoch': '0.2381'}
+  File "/root/mol-llm/scripts/sft.py", line 500, in <module>
+    main(script_args, sft_config, model_config)
+  File "/root/mol-llm/scripts/sft.py", line 416, in main
+    trainer.train()
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1519, in _inner_training_loop
+    self._run_epoch(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1747, in _run_epoch
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 1842, in training_step
+    return super().training_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1919, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 1760, in compute_loss
+    entropy = (entropy_sum / num_valid).item() if num_valid > 0 else 0.0
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

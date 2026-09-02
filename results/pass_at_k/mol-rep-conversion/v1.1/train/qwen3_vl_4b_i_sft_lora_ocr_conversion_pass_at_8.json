@@ -1,0 +1,101 @@
+{
+  "engine_name": "qwen3_vl_4b_i_sft_lora_ocr_conversion",
+  "dataset_name": "kdeng03/mol-rep-conversion-v1.1",
+  "dataset_split": "train",
+  "num_samples": 6995,
+  "k_values": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "pass_at_k": {
+    "pass@1": 0.49035025017869904,
+    "pass@2": 0.5927090779127948,
+    "pass@4": 0.677626876340243,
+    "pass@8": 0.7469621157969979
+  },
+  "inchikey_match_at_k": {
+    "inchikey_match@1": 0.49035025017869904,
+    "inchikey_match@2": 0.5927090779127948,
+    "inchikey_match@4": 0.677626876340243,
+    "inchikey_match@8": 0.7469621157969979
+  },
+  "can_smiles_match_at_k": {
+    "can_smiles_match@1": 0.49035025017869904,
+    "can_smiles_match@2": 0.592566118656183,
+    "can_smiles_match@4": 0.677626876340243,
+    "can_smiles_match@8": 0.7469621157969979
+  },
+  "avg_tanimoto_at_k": {
+    "avg_best_tanimoto@1": 0.5791052947308889,
+    "avg_best_tanimoto@2": 0.6817107447560439,
+    "avg_best_tanimoto@4": 0.7579747773105627,
+    "avg_best_tanimoto@8": 0.8167600367898212
+  },
+  "valid_rate_at_k": {
+    "valid_rate@1": 0.730807719799857,
+    "valid_rate@2": 0.7285203716940671,
+    "valid_rate@4": 0.7304503216583274,
+    "valid_rate@8": 0.7328984989278056
+  },
+  "all_correct_at_k": {
+    "all_correct@1": 0.49035025017869904,
+    "all_correct@2": 0.37641172265904216,
+    "all_correct@4": 0.277626876340243,
+    "all_correct@8": 0.19428162973552537
+  },
+  "all_wrong_at_k": {
+    "all_wrong@1": 0.509649749821301,
+    "all_wrong@2": 0.40729092208720513,
+    "all_wrong@4": 0.32237312365975695,
+    "all_wrong@8": 0.25303788420300216
+  },
+  "mean_reward_at_k": {
+    "mean_reward@1": 2.025078022633493,
+    "mean_reward@2": 2.014205689699142,
+    "mean_reward@4": 2.010587379854555,
+    "mean_reward@8": 2.013836112731988
+  },
+  "std_reward_at_k": {
+    "std_reward@1": 0.0,
+    "std_reward@2": 0.2156891064431072,
+    "std_reward@4": 0.35437407503471335,
+    "std_reward@8": 0.44406690760414946
+  },
+  "cv_reward_at_k": {
+    "cv_reward@1": 0.0,
+    "cv_reward@2": 0.1095211375400856,
+    "cv_reward@4": 0.18258093285738078,
+    "cv_reward@8": 0.23016225794467868
+  },
+  "max_reward_at_k": {
+    "max_reward@1": 2.025078022633493,
+    "max_reward@2": 2.2298947961422493,
+    "max_reward@4": 2.3954277031656463,
+    "max_reward@8": 2.5288231920904067
+  },
+  "min_reward_at_k": {
+    "min_reward@1": 2.025078022633493,
+    "min_reward@2": 1.7985165832560348,
+    "min_reward@4": 1.600918607343711,
+    "min_reward@8": 1.4318515631777802
+  },
+  "range_reward_at_k": {
+    "range_reward@1": 0.0,
+    "range_reward@2": 0.4313782128862144,
+    "range_reward@4": 0.7945090958219349,
+    "range_reward@8": 1.0969716289126272
+  },
+  "difficulty_distribution": {
+    "easy": 3430,
+    "medium": 1310,
+    "hard": 485,
+    "impossible": 1770
+  },
+  "generation_params": {
+    "max_new_tokens": 2048,
+    "temperature": 1.0,
+    "top_p": 1.0
+  }
+}

@@ -1,0 +1,40 @@
+ 31%|████████████████████████                                                      | 203/657 [17:42<37:45,  4.99s/it]Traceback (most recent call last):
+{'loss': '1.789', 'grad_norm': '1.073', 'learning_rate': '7.5e-05', 'entropy': '0.7126', 'num_tokens': '1.055e+05', 'mean_token_accuracy': '0.6293', 'epoch': '0.07314'}
+{'loss': '1.123', 'grad_norm': '1.045', 'learning_rate': '9.827e-05', 'entropy': '1.228', 'num_tokens': '1.838e+05', 'mean_token_accuracy': '0.6606', 'epoch': '0.1463'}
+{'loss': '0.9341', 'grad_norm': '1.049', 'learning_rate': '9.576e-05', 'entropy': '0.9147', 'num_tokens': '2.919e+05', 'mean_token_accuracy': '0.7078', 'epoch': '0.2194'}
+{'loss': '0.8777', 'grad_norm': '1.293', 'learning_rate': '9.325e-05', 'entropy': '0.8842', 'num_tokens': '3.773e+05', 'mean_token_accuracy': '0.7159', 'epoch': '0.2926'}
+{'loss': '0.7464', 'grad_norm': '1.224', 'learning_rate': '9.074e-05', 'entropy': '0.7427', 'num_tokens': '4.749e+05', 'mean_token_accuracy': '0.7474', 'epoch': '0.3657'}
+{'loss': '0.6815', 'grad_norm': '1.855', 'learning_rate': '8.823e-05', 'entropy': '0.683', 'num_tokens': '5.76e+05', 'mean_token_accuracy': '0.7641', 'epoch': '0.4389'}
+{'loss': '0.6157', 'grad_norm': '1.747', 'learning_rate': '8.571e-05', 'entropy': '0.6184', 'num_tokens': '6.669e+05', 'mean_token_accuracy': '0.7887', 'epoch': '0.512'}
+{'loss': '0.5944', 'grad_norm': '1.771', 'learning_rate': '8.32e-05', 'entropy': '0.5973', 'num_tokens': '7.677e+05', 'mean_token_accuracy': '0.796', 'epoch': '0.5851'}
+{'loss': '0.5466', 'grad_norm': '2.16', 'learning_rate': '8.069e-05', 'entropy': '0.5424', 'num_tokens': '8.715e+05', 'mean_token_accuracy': '0.8085', 'epoch': '0.6583'}
+{'loss': '0.5021', 'grad_norm': '1.42', 'learning_rate': '7.818e-05', 'entropy': '0.5176', 'num_tokens': '9.704e+05', 'mean_token_accuracy': '0.8235', 'epoch': '0.7314'}
+{'loss': '0.498', 'grad_norm': '1.897', 'learning_rate': '7.567e-05', 'entropy': '0.5057', 'num_tokens': '1.076e+06', 'mean_token_accuracy': '0.8257', 'epoch': '0.8046'}
+{'loss': '0.4612', 'grad_norm': '1.746', 'learning_rate': '7.316e-05', 'entropy': '0.4645', 'num_tokens': '1.159e+06', 'mean_token_accuracy': '0.8352', 'epoch': '0.8777'}
+  File "/root/mol-llm/scripts/sft.py", line 353, in <module>
+    main(script_args, sft_config, model_config)
+  File "/root/mol-llm/scripts/sft.py", line 278, in main
+    trainer.train()
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1519, in _inner_training_loop
+    self._run_epoch(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1747, in _run_epoch
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/sft_trainer.py", line 1842, in training_step
+    return super().training_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1949, in training_step
+    self.accelerator.backward(loss, **kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/accelerate/accelerator.py", line 2850, in backward
+    loss.backward(**kwargs)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/_tensor.py", line 631, in backward
+    torch.autograd.backward(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/autograd/__init__.py", line 381, in backward
+    _engine_run_backward(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/autograd/graph.py", line 869, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

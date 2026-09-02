@@ -1,0 +1,30 @@
+  1%|█▏                                                                                                                           | 37/3940 [02:44<4:44:32,  4.37s/it]Traceback (most recent call last):
+{'loss': '2.187', 'grad_norm': '3.095', 'learning_rate': '1.261e-05', 'entropy': '0.5806', 'num_tokens': '5.266e+04', 'mean_token_accuracy': '0.6075', 'epoch': '0.04063'}
+{'loss': '1.739', 'grad_norm': '1.11', 'learning_rate': '2.605e-05', 'entropy': '0.7623', 'num_tokens': '1.051e+05', 'mean_token_accuracy': '0.6172', 'epoch': '0.08127'}
+  File "/root/mol-llm/scripts/sft.py", line 473, in <module>
+    main(script_args, sft_config, model_config)
+  File "/root/mol-llm/scripts/sft.py", line 397, in main
+    trainer.train()
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1519, in _inner_training_loop
+    self._run_epoch(
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1763, in _run_epoch
+    self.current_flos += float(self.floating_point_ops(inputs))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 3930, in floating_point_ops
+    return 6 * inputs[main_input].numel() * self.model.num_parameters(exclude_embeddings=True)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/modeling_utils.py", line 1070, in num_parameters
+    for name, param in self.named_parameters():
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2721, in named_parameters
+    yield from gen
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2657, in _named_members
+    members = get_members_fn(module)
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2716, in <lambda>
+    lambda module: module._parameters.items(),
+
+KeyboardInterrupt

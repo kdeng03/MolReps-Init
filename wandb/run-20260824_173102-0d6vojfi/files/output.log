@@ -1,0 +1,4 @@
+  0%|                                                                                                                                        | 0/210 [00:00<?, ?it/s]
+{'train_runtime': '4.405', 'train_samples_per_second': '735.6', 'train_steps_per_second': '47.68', 'train_loss': '0', 'epoch': '9'}
+✅✅ Conversion training finished. Saving model to ckpt/ocr_conversion/qwen3_vl_4b_i_sft_lora_ocr_conversion/v1.1/20260824_173006/...
+✅✅ Script completed.

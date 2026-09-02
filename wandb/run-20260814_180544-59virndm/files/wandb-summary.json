@@ -1,0 +1,1 @@
+{"_timestamp":1.7867020485373125e+09,"train/loss":0,"_step":1,"train/entropy":NaN,"train/mean_token_accuracy":0,"train/epoch":0.1,"train/global_step":32,"_wandb":{"runtime":119},"train/learning_rate":3.229166666666667e-05,"train/grad_norm":NaN,"_runtime":119,"train/num_tokens":13336}

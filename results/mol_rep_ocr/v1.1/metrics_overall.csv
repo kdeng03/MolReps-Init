@@ -1,0 +1,6 @@
+model_name,num_samples,gt_valid_ratio,pred_valid_ratio,em_ratio,can_smiles_match_ratio,inchikey_match_ratio,tanimoto_sim_mean,tanimoto_sim_std
+qwen3_vl_4b_i,80.0,1.0,0.2375,0.0,0.0125,0.0125,0.07532948148422494,0.19774128430082988
+qwen3_vl_4b_i_grpo_lora_from_sft_lora_ocr_conversion,80.0,1.0,0.5625,0.2125,0.2125,0.2125,0.31570795003180335,0.4030894664979305
+qwen3_vl_4b_i_sft_lora_conversion,80.0,1.0,0.6375,0.2,0.2,0.2,0.3378562676846317,0.3936594601762946
+qwen3_vl_4b_i_sft_lora_ocr,80.0,1.0,0.4375,0.0375,0.0375,0.0375,0.17854708715384213,0.29754777594108117
+qwen3_vl_4b_i_sft_lora_ocr_conversion,80.0,1.0,0.6875,0.2625,0.2625,0.2625,0.411414195238217,0.4164126924505178

@@ -1,0 +1,71 @@
+[34m[1mwandb[0m: Detected [openai] in use.
+[34m[1mwandb[0m: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+[34m[1mwandb[0m: For more information, check out the docs at: https://weave-docs.wandb.ai
+  0%|                                                                                                                                                                        | 0/380 [00:00<?, ?it/s]
+INFO:httpx:HTTP Request: GET https://hf-mirror.com/api/models/kdeng03/MolQwen3-VL-4B-Instruct-SFT/revision/main "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD https://hf-mirror.com/kdeng03/MolQwen3-VL-4B-Instruct-SFT/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:03<00:00,  3.18s/it]
+
+Traceback (most recent call last):
+  File "/root/mol-llm/scripts/grpo_trl.py", line 432, in <module>
+    main(script_args, grpo_config, model_config)
+  File "/root/mol-llm/scripts/grpo_trl.py", line 424, in main
+    trainer.train()
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1515, in _inner_training_loop
+    self._evaluate(trial, ignore_keys_for_eval, skip_scheduler=True)
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 3021, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2608, in evaluate
+    output = self.evaluation_loop(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2733, in evaluation_loop
+    losses, logits, labels = self.prediction_step(model, inputs, prediction_loss_only, ignore_keys=ignore_keys)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 3268, in prediction_step
+    inputs = self._prepare_inputs(inputs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/extras/profiling.py", line 211, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1583, in _prepare_inputs
+    inputs = self._generate_and_score_completions(generation_batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2701, in _generate_and_score_completions
+    raise ValueError(
+ValueError: Invalid value for scale_rewards: grpo. Must be one of 'batch', 'group', or 'none'.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/mol-llm/scripts/grpo_trl.py", line 432, in <module>
+[rank0]:     main(script_args, grpo_config, model_config)
+[rank0]:   File "/root/mol-llm/scripts/grpo_trl.py", line 424, in main
+[rank0]:     trainer.train()
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1437, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 1515, in _inner_training_loop
+[rank0]:     self._evaluate(trial, ignore_keys_for_eval, skip_scheduler=True)
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 3021, in _evaluate
+[rank0]:     metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2608, in evaluate
+[rank0]:     output = self.evaluation_loop(
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/transformers/trainer.py", line 2733, in evaluation_loop
+[rank0]:     losses, logits, labels = self.prediction_step(model, inputs, prediction_loss_only, ignore_keys=ignore_keys)
+[rank0]:                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 3268, in prediction_step
+[rank0]:     inputs = self._prepare_inputs(inputs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/extras/profiling.py", line 211, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 1583, in _prepare_inputs
+[rank0]:     inputs = self._generate_and_score_completions(generation_batch)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/vllm/lib/python3.12/site-packages/trl/trainer/grpo_trainer.py", line 2701, in _generate_and_score_completions
+[rank0]:     raise ValueError(
+[rank0]: ValueError: Invalid value for scale_rewards: grpo. Must be one of 'batch', 'group', or 'none'.
