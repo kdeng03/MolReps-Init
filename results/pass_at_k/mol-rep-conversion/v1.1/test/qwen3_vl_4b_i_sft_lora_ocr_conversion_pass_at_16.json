@@ -1,0 +1,143 @@
+{
+  "engine_name": "qwen3_vl_4b_i_sft_lora_ocr_conversion",
+  "dataset_name": "kdeng03/mol-rep-conversion-v1.1",
+  "dataset_split": "test",
+  "num_samples": 875,
+  "k_values": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "pass_at_k": {
+    "pass@1": 0.6788571428571428,
+    "pass@2": 0.7611428571428571,
+    "pass@4": 0.8011428571428572,
+    "pass@8": 0.8434285714285714,
+    "pass@16": 0.8674285714285714
+  },
+  "inchikey_match_at_k": {
+    "inchikey_match@1": 0.6788571428571428,
+    "inchikey_match@2": 0.7611428571428571,
+    "inchikey_match@4": 0.8011428571428572,
+    "inchikey_match@8": 0.8434285714285714,
+    "inchikey_match@16": 0.8674285714285714
+  },
+  "can_smiles_match_at_k": {
+    "can_smiles_match@1": 0.6777142857142857,
+    "can_smiles_match@2": 0.76,
+    "can_smiles_match@4": 0.7988571428571428,
+    "can_smiles_match@8": 0.8422857142857143,
+    "can_smiles_match@16": 0.8662857142857143
+  },
+  "avg_tanimoto_at_k": {
+    "avg_best_tanimoto@1": 0.7498752812766862,
+    "avg_best_tanimoto@2": 0.8285522934151083,
+    "avg_best_tanimoto@4": 0.8606661896278435,
+    "avg_best_tanimoto@8": 0.8934031074473758,
+    "avg_best_tanimoto@16": 0.913869430735208
+  },
+  "valid_rate_at_k": {
+    "valid_rate@1": 0.8708571428571429,
+    "valid_rate@2": 0.8788571428571429,
+    "valid_rate@4": 0.8788571428571429,
+    "valid_rate@8": 0.8821428571428571,
+    "valid_rate@16": 0.8828571428571429
+  },
+  "all_correct_at_k": {
+    "all_correct@1": 0.6788571428571428,
+    "all_correct@2": 0.6045714285714285,
+    "all_correct@4": 0.5405714285714286,
+    "all_correct@8": 0.4617142857142857,
+    "all_correct@16": 0.39085714285714285
+  },
+  "all_wrong_at_k": {
+    "all_wrong@1": 0.3211428571428571,
+    "all_wrong@2": 0.23885714285714285,
+    "all_wrong@4": 0.19885714285714284,
+    "all_wrong@8": 0.15657142857142858,
+    "all_wrong@16": 0.13257142857142856
+  },
+  "mean_reward_at_k": {
+    "mean_reward@1": 2.3932233549240576,
+    "mean_reward@2": 2.403470349055231,
+    "mean_reward@4": 2.4006550539385545,
+    "mean_reward@8": 2.408118007775022,
+    "mean_reward@16": 2.408497756295359
+  },
+  "std_reward_at_k": {
+    "std_reward@1": 0.0,
+    "std_reward@2": 0.15252008336660888,
+    "std_reward@4": 0.22499593373029356,
+    "std_reward@8": 0.2882610071704234,
+    "std_reward@16": 0.32956412233759697
+  },
+  "cv_reward_at_k": {
+    "cv_reward@1": 0.0,
+    "cv_reward@2": 0.07634071196972023,
+    "cv_reward@4": 0.11214654870612303,
+    "cv_reward@8": 0.14225167224710453,
+    "cv_reward@16": 0.1603088317498801
+  },
+  "max_reward_at_k": {
+    "max_reward@1": 2.3932233549240576,
+    "max_reward@2": 2.55599043242184,
+    "max_reward@4": 2.631903294106155,
+    "max_reward@8": 2.7117003244444926,
+    "max_reward@16": 2.7579334860884086
+  },
+  "min_reward_at_k": {
+    "min_reward@1": 2.3932233549240576,
+    "min_reward@2": 2.250950265688622,
+    "min_reward@4": 2.127733971293658,
+    "min_reward@8": 1.9734363914467774,
+    "min_reward@16": 1.8260324458822264
+  },
+  "range_reward_at_k": {
+    "range_reward@1": 0.0,
+    "range_reward@2": 0.30504016673321777,
+    "range_reward@4": 0.504169322812497,
+    "range_reward@8": 0.7382639329977153,
+    "range_reward@16": 0.931901040206182
+  },
+  "pass_at_k_counts": {
+    "pass@1": 594,
+    "pass@2": 666,
+    "pass@4": 701,
+    "pass@8": 738,
+    "pass@16": 759
+  },
+  "pass_at_k_ratios": {
+    "pass@1": 0.6788571428571428,
+    "pass@2": 0.7611428571428571,
+    "pass@4": 0.8011428571428572,
+    "pass@8": 0.8434285714285714,
+    "pass@16": 0.8674285714285714
+  },
+  "incremental_pass_at_k_counts": {
+    "incremental_pass@1": 594,
+    "incremental_pass@2": 72,
+    "incremental_pass@4": 35,
+    "incremental_pass@8": 37,
+    "incremental_pass@16": 21
+  },
+  "incremental_pass_at_k_ratios": {
+    "incremental_pass@1": 0.6788571428571428,
+    "incremental_pass@2": 0.08228571428571428,
+    "incremental_pass@4": 0.04,
+    "incremental_pass@8": 0.04228571428571429,
+    "incremental_pass@16": 0.024
+  },
+  "difficulty_distribution": {
+    "easy": 594,
+    "medium": 144,
+    "hard": 21,
+    "impossible": 116
+  },
+  "generation_params": {
+    "max_new_tokens": 2048,
+    "temperature": 1.0,
+    "top_p": 1.0
+  }
+}

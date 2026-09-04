@@ -197,8 +197,8 @@ vllm:
     vllm_extra:
       enable_lora: true
     vllm_lora_request:
-      # path: "ckpt/ocr_conversion/qwen3_vl_4b_i_sft_lora_ocr_conversion/v1.1/20260816_195334/checkpoint-4370" # v1.1, epoch=10 (e-s, loss, patience=2, threshold=0.0)
-      path: "ckpt/ocr_conversion/qwen3_vl_4b_i_sft_lora_ocr_conversion/v1.1/20260816_195334/checkpoint-1748" # v1.1, epoch=4
+      path: "ckpt/ocr_conversion/qwen3_vl_4b_i_sft_lora_ocr_conversion/v1.1/20260816_195334/checkpoint-4370" # v1.1, epoch=10 (e-s, loss, patience=2, threshold=0.0)
+      # path: "ckpt/ocr_conversion/qwen3_vl_4b_i_sft_lora_ocr_conversion/v1.1/20260816_195334/checkpoint-1748" # v1.1, epoch=4
       name: ocr_conversion
 
     ### Ablation

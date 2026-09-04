@@ -37,6 +37,7 @@ from tqdm import tqdm
 import numpy as np
 
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
+os.environ["HF_TOKEN"] = "your_key"
 
 from PIL import Image
 from datasets import load_dataset
@@ -559,6 +560,24 @@ def evaluate_pass_at_k(
     min_reward_at_k = {}
     range_reward_at_k = {}
     
+    # pass@k 数据比例
+    pass_at_k_counts = {}  # 记录每个 k 的 pass 样本数（绝对值）
+    pass_at_k_ratios = {}  # 记录每个 k 的 pass 比例
+    
+    # incremental pass@k（首次 pass 的 k 值分布）
+    incremental_pass_at_k_counts = {}  # 首次 pass 的绝对值
+    incremental_pass_at_k_ratios = {}  # 首次 pass 的比例
+    
+    # 预先计算所有样本的首次 pass k 值
+    first_pass_k_list = []
+    for sample in sample_results:
+        first_pass_k = None
+        for i, r in enumerate(sample["results"]):
+            if r.get("is_inchikey_match", False):
+                first_pass_k = i + 1
+                break
+        first_pass_k_list.append(first_pass_k)
+    
     for k in k_values:
         pass_count = 0
         inchikey_count = 0
@@ -636,6 +655,17 @@ def evaluate_pass_at_k(
         
         n_samples = len(sample_results)
         pass_at_k_results[f"pass@{k}"] = pass_count / n_samples
+        pass_at_k_counts[f"pass@{k}"] = pass_count  # 记录 pass 样本数（绝对值）
+        pass_at_k_ratios[f"pass@{k}"] = pass_count / n_samples  # 记录 pass 比例
+        
+        # incremental pass@k：统计首次 pass k 值 <= k 且 > 上一个 k 的样本
+        # 对于 k=1: first_pass_k == 1
+        # 对于 k>1: prev_k < first_pass_k <= k
+        prev_k = k_values[k_values.index(k) - 1] if k_values.index(k) > 0 else 0
+        incremental_pass_count = sum(1 for fpk in first_pass_k_list if fpk is not None and prev_k < fpk <= k)
+        incremental_pass_at_k_counts[f"incremental_pass@{k}"] = incremental_pass_count
+        incremental_pass_at_k_ratios[f"incremental_pass@{k}"] = incremental_pass_count / n_samples
+        
         inchikey_match_at_k[f"inchikey_match@{k}"] = inchikey_count / n_samples
         can_smiles_match_at_k[f"can_smiles_match@{k}"] = smiles_count / n_samples
         avg_tanimoto_at_k[f"avg_best_tanimoto@{k}"] = np.mean(tanimoto_scores)
@@ -656,6 +686,7 @@ def evaluate_pass_at_k(
         logger.info(f"🧪 can_smiles_match@{k} = {can_smiles_match_at_k[f'can_smiles_match@{k}']:.4f} ({smiles_count}/{n_samples})")
         logger.info(f"📈 avg_best_tanimoto@{k} = {avg_tanimoto_at_k[f'avg_best_tanimoto@{k}']:.4f}")
         logger.info(f"📊 valid_rate@{k} = {valid_rate_at_k[f'valid_rate@{k}']:.4f} ({valid_completions}/{total_completions})")
+        logger.info(f"📈 incremental_pass@{k} = {incremental_pass_at_k_ratios[f'incremental_pass@{k}']:.4f} ({incremental_pass_count}/{n_samples})")
         logger.info(f"🎯 all_correct@{k} = {all_correct_at_k[f'all_correct@{k}']:.4f} ({all_correct_count}/{n_samples})")
         logger.info(f"❌ all_wrong@{k} = {all_wrong_at_k[f'all_wrong@{k}']:.4f} ({all_wrong_count}/{n_samples})")
         logger.info(f"💰 mean_reward@{k} = {mean_reward_at_k[f'mean_reward@{k}']:.4f}")
@@ -665,6 +696,22 @@ def evaluate_pass_at_k(
     # 样本难度分布统计
     difficulty_distribution = difficulty_classifier.classify_dataset(sample_results)
     logger.info(f"📋 样本难度分布: {difficulty_distribution}")
+    
+    # 打印 pass@k 数据比例
+    logger.info(f"📊 pass@k 数据比例:")
+    for k in k_values:
+        count = pass_at_k_counts.get(f"pass@{k}", 0)
+        ratio = pass_at_k_results.get(f"pass@{k}", 0.0)
+        logger.info(f"  pass@{k}: {count}/{n_samples} = {ratio:.4f} ({ratio*100:.2f}%)")
+    
+    # 打印 incremental pass@k 数据比例
+    logger.info(f"📊 incremental_pass@k 数据比例（首次 pass）:")
+    for k in k_values:
+        count = incremental_pass_at_k_counts.get(f"incremental_pass@{k}", 0)
+        ratio = incremental_pass_at_k_ratios.get(f"incremental_pass@{k}", 0.0)
+        logger.info(f"  incremental_pass@{k}: {count}/{n_samples} = {ratio:.4f} ({ratio*100:.2f}%)")
+    impossible_count = n_samples - sum(incremental_pass_at_k_counts.values())
+    logger.info(f"  impossible: {impossible_count}/{n_samples} = {impossible_count/n_samples:.4f} ({impossible_count/n_samples*100:.2f}%)")
     
     # 汇总结果
     final_results = {
@@ -686,6 +733,10 @@ def evaluate_pass_at_k(
         "max_reward_at_k": max_reward_at_k,
         "min_reward_at_k": min_reward_at_k,
         "range_reward_at_k": range_reward_at_k,
+        "pass_at_k_counts": pass_at_k_counts,  # pass@k 绝对值
+        "pass_at_k_ratios": pass_at_k_ratios,  # pass@k 比例
+        "incremental_pass_at_k_counts": incremental_pass_at_k_counts,  # incremental pass 绝对值
+        "incremental_pass_at_k_ratios": incremental_pass_at_k_ratios,  # incremental pass 比例
         "difficulty_distribution": difficulty_distribution,
         "generation_params": {
             "max_new_tokens": args.max_new_tokens,
@@ -755,25 +806,32 @@ def save_results(results: Dict[str, Any], output_file: str):
         csv_file = output_file + ".csv"
     
     import pandas as pd
+    from collections import OrderedDict
     
     summary_data = []
     for k in results["k_values"]:
-        row = {
-            "k": k,
-            "pass_at_k": results["pass_at_k"].get(f"pass@{k}", 0.0),
-            "inchikey_match_at_k": results["inchikey_match_at_k"].get(f"inchikey_match@{k}", 0.0),
-            "can_smiles_match_at_k": results["can_smiles_match_at_k"].get(f"can_smiles_match@{k}", 0.0),
-            "avg_best_tanimoto_at_k": results["avg_tanimoto_at_k"].get(f"avg_best_tanimoto@{k}", 0.0),
-            "valid_rate_at_k": results["valid_rate_at_k"].get(f"valid_rate@{k}", 0.0),
-            "all_correct_at_k": results["all_correct_at_k"].get(f"all_correct@{k}", 0.0),
-            "all_wrong_at_k": results["all_wrong_at_k"].get(f"all_wrong@{k}", 0.0),
-            "mean_reward_at_k": results["mean_reward_at_k"].get(f"mean_reward@{k}", 0.0),
-            "std_reward_at_k": results["std_reward_at_k"].get(f"std_reward@{k}", 0.0),
-            "cv_reward_at_k": results["cv_reward_at_k"].get(f"cv_reward@{k}", 0.0),
-            "max_reward_at_k": results["max_reward_at_k"].get(f"max_reward@{k}", 0.0),
-            "min_reward_at_k": results["min_reward_at_k"].get(f"min_reward@{k}", 0.0),
-            "range_reward_at_k": results["range_reward_at_k"].get(f"range_reward@{k}", 0.0),
-        }
+        row = OrderedDict([
+            # pass@k 和 incremental 的 count/ratio 放最前面
+            ("k", k),
+            ("pass_at_k_count", results["pass_at_k_counts"].get(f"pass@{k}", 0)),
+            ("pass_at_k_ratio", results["pass_at_k_ratios"].get(f"pass@{k}", 0.0)),
+            ("incremental_pass_count", results["incremental_pass_at_k_counts"].get(f"incremental_pass@{k}", 0)),
+            ("incremental_pass_ratio", results["incremental_pass_at_k_ratios"].get(f"incremental_pass@{k}", 0.0)),
+            # 其他 metrics
+            ("pass_at_k", results["pass_at_k"].get(f"pass@{k}", 0.0)),
+            ("inchikey_match_at_k", results["inchikey_match_at_k"].get(f"inchikey_match@{k}", 0.0)),
+            ("can_smiles_match_at_k", results["can_smiles_match_at_k"].get(f"can_smiles_match@{k}", 0.0)),
+            ("avg_best_tanimoto_at_k", results["avg_tanimoto_at_k"].get(f"avg_best_tanimoto@{k}", 0.0)),
+            ("valid_rate_at_k", results["valid_rate_at_k"].get(f"valid_rate@{k}", 0.0)),
+            ("all_correct_at_k", results["all_correct_at_k"].get(f"all_correct@{k}", 0.0)),
+            ("all_wrong_at_k", results["all_wrong_at_k"].get(f"all_wrong@{k}", 0.0)),
+            ("mean_reward_at_k", results["mean_reward_at_k"].get(f"mean_reward@{k}", 0.0)),
+            ("std_reward_at_k", results["std_reward_at_k"].get(f"std_reward@{k}", 0.0)),
+            ("cv_reward_at_k", results["cv_reward_at_k"].get(f"cv_reward@{k}", 0.0)),
+            ("max_reward_at_k", results["max_reward_at_k"].get(f"max_reward@{k}", 0.0)),
+            ("min_reward_at_k", results["min_reward_at_k"].get(f"min_reward@{k}", 0.0)),
+            ("range_reward_at_k", results["range_reward_at_k"].get(f"range_reward@{k}", 0.0)),
+        ])
         summary_data.append(row)
     
     df = pd.DataFrame(summary_data)
@@ -889,8 +947,11 @@ def main():
         logger.info(f"  mean_reward@{k}:       {results['mean_reward_at_k'][f'mean_reward@{k}']:.4f}")
         logger.info(f"  std_reward@{k}:        {results['std_reward_at_k'][f'std_reward@{k}']:.4f}")
         logger.info(f"  cv_reward@{k}:         {results['cv_reward_at_k'][f'cv_reward@{k}']:.4f}")
+        logger.info(f"  incremental_pass@{k}:   {results['incremental_pass_at_k_ratios'][f'incremental_pass@{k}']:.4f}")
     logger.info("=" * 60)
     logger.info(f"📋 样本难度分布: {results['difficulty_distribution']}")
+    logger.info(f"📊 pass@k 比例: {results['pass_at_k_ratios']}")
+    logger.info(f"📊 incremental_pass@k 比例: {results['incremental_pass_at_k_ratios']}")
     logger.info("=" * 60)
     logger.info("✅ 评估完成!")
 

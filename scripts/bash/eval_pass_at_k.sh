@@ -20,10 +20,10 @@ model_name=qwen3_vl_4b_i_sft_lora_ocr_conversion
 # 数据集配置
 task_name=mol-rep-conversion
 dataset_name=kdeng03/${task_name}-v1.1
-dataset_split=train
+dataset_split=test
 
 # 评估配置
-max_k=8
+max_k=16
 max_samples=-1
 temperature=1.0
 top_p=1.0
@@ -54,4 +54,4 @@ PYTHONPATH="$(pwd)" \
     --max_new_tokens "$max_new_tokens" \
     --output_file "$output_file" \
     --prompt_key "$prompt_key" \
-    --image_key "$image_key" | tee logs/pass_at_k/${task_name}/v1.1/${dataset_split}/${model_name}_pass_at_${max_k}.log
+    --image_key "$image_key" 2>&1 | tee logs/pass_at_k/${task_name}/v1.1/${dataset_split}/${model_name}_pass_at_${max_k}.log
