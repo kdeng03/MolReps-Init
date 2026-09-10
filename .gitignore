@@ -3,7 +3,7 @@ __pycache__/
 *.py[codz]
 *$py.class
 # *.ipynb
-*.pdf
+# *.pdf
 
 # C extensions
 *.so
